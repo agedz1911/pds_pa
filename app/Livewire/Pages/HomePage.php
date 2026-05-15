@@ -10,7 +10,7 @@ use Livewire\Attributes\Title;
 use Livewire\Component;
 
 
-#[Title('KONAS IX HIFERI')]
+#[Title('PDS PA')]
 class HomePage extends Component
 {
     public function render()

@@ -6,7 +6,7 @@ use App\Models\Accommodation as ModelsAccommodation;
 use Livewire\Attributes\Title;
 use Livewire\Component;
 
-#[Title('KONAS IX HIFERI - Accommodation')]
+#[Title('PDS PA - Accommodation')]
 class Accommodation extends Component
 {
     public function render()
