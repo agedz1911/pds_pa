@@ -1,41 +1,40 @@
 <div class="relative">
     <section class="lg:min-h-screen banner relative pb-16 lg:pb-28">
-        <div class="absolute inset-0 bg-gradient-to-t from-[#fff]/20 from-10% to-[#E9F3EB]/70"></div>
-        <div
-            class="z-10 relative pt-10 md:pt-14 lg:pt-32 flex flex-col md:flex-row items-start justify-start md:items-end md:justify-end gap-4">
+        <div class="absolute inset-0 bg-gradient-to-t from-[#262262]/90 to-[#D62C8C]/70"></div>
+        <div class="z-10 relative pt-10 md:pt-14 lg:pt-32 ">
 
-            <div class="px-5 order-1 lg:order-2 w-full max-w-4xl flex flex-col items-center md:items-start">
-                <img src="{{asset('assets/images/logo/logo-all.png')}}" class="w-40 rounded-xl" alt="Banner">
+            <div class="px-5 order-1 lg:order-2 w-full max-w-7xl md:px-52">
+                <img src="{{asset('assets/images/logo/logo-all.png')}}" class="w-full max-w-md rounded-xl" alt="Banner">
                 <div class="flex gap-1 mt-6">
                     <div>
                         <img src="{{asset('assets/images/logo/icon.png')}}" class="w-full max-w-40" alt="">
                     </div>
-                    <div class="w-full ">
-                        <h1 class="text-xl lg:text-3xl text-[#302b88] font-bold mb-0 ">
-                            KONAS IX
+                    <div class="w-full text-white">
+                        <h1 class="text-3xl lg:text-6xl font-bold mb-0 ">
+                            ASEAN <br> PATHOLOGY
                         </h1>
-                        <h1 class="font-bold text-6xl lg:text-8xl tracking-widest text-[#39B54A] mt-0">HIFERI</h1>
-                        <div class="flex flex-row w-full">
-                            <p class="text-sm">The 9<sup>th</sup> National Congress of</p>
+                        <H4 class="md:tracking-widest text-xl md:text-3xl uppercase font-semibold">Conference 2026</H4>
+                        <div
+                            class="bg-[#FF47AF] w-fit px-2 md:px-5 py-1 md:rounded-tl-2xl md:rounded-br-2xl rounded-tl-lg rounded-br-lg">
+                            <p class="tracking-widest md:text-xl uppercase font-bold text-xs">Indonesian Chapter</p>
                         </div>
-                        <p class="text-sm tracking-tighter">Indonesian Association of Reproductive Endocrinology and
-                            Fertility</p>
+
                     </div>
                 </div>
                 <div class="w-full max-w-2xl">
-                    <p class="italic mt-3 text-[#302b88] font-bold md:text-xl">" Empowering Reproductive Endocrinology
-                        and Infertility Clinicians:
-                        Dedicated to Care, Driven by Innovation, Defined by Success. "</p>
+                    <p class="italic mt-3 text-[#FFDE17] font-bold md:text-3xl">" Precision in Practise: Frontiers in
+                        Gynaecological, Thoraric and Oral Pathology "</p>
                 </div>
-                <p class="text-[#302b88] mt-3">
-                    October 8<sup>th</sup> - 11<sup>th</sup>, 2026 <br> Holiday Inn, Pasteur, Bandung
+                <p class="text-[#ececec] mt-3">
+                    November 7<sup>th</sup> - 8<sup>th</sup>, 2026 <br> The Ritz-Carlton Mega Kuningan, Jakarta,
+                    Indonesia
                 </p>
                 <div class="mt-7 w-full gap-1 flex flex-wrap">
                     <a
-                        class="text-white hover:cursor-pointer border bg-[#262262] hover:border-[#262262] focus:ring-4 focus:outline-none focus:ring-[#262262] font-medium rounded-lg text-sm px-5 md:px-10 py-3 text-center  dark:border-[#262262] dark:text-[#262262] dark:hover:text-white dark:hover:bg-white dark:focus:ring-white"><i
+                        class="text-white hover:cursor-pointer border-slate-50/30 border bg-[#262262] hover:border-[#262262] focus:ring-4 focus:outline-none focus:ring-[#262262] font-medium rounded-lg text-sm px-5 md:px-10 py-3 text-center  dark:border-[#262262] dark:text-[#262262] dark:hover:text-white dark:hover:bg-white dark:focus:ring-white"><i
                             class="fa-solid fa-file-download mr-1 text-xs"></i>Download Announcement </a>
                     <a href="/registration" wire:navigate
-                        class="btn text-sm px-5 md:px-10 py-3 text-center rounded-lg btn-lg btn-soft btn-success"><i
+                        class="btn text-sm px-5 md:px-10 py-3 text-center rounded-lg btn-lg btn-soft btn-secondary"><i
                             class="fa-solid fa-pen-to-square"></i> Register Now </a>
                 </div>
             </div>
@@ -44,35 +43,35 @@
             class="absolute wave block md:hidden lg:block overflow-hidden w-full z-0 left-0 leading-none bottom-[-1px]">
             <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320">
                 <path class="fill-white translate-middle-y" fill-opacity="1"
-                    d="M0,96L120,128C240,160,480,224,720,256C960,288,1200,288,1320,288L1440,288L1440,320L1320,320C1200,320,960,320,720,320C480,320,240,320,120,320L0,320Z">
+                    d="M0,256L120,261.3C240,267,480,277,720,256C960,235,1200,181,1320,154.7L1440,128L1440,320L1320,320C1200,320,960,320,720,320C480,320,240,320,120,320L0,320Z">
                 </path>
             </svg>
         </div>
     </section>
 
     <section class="px-2 -mt-10 lg:-mt-30 lg:px-7 pb-24 ">
-        <div id="countdown" class="flex flex-wrap justify-center lg:justify-start md:flex-row w-full mx-auto gap-4">
-            <div class="text-center card bg-[#39B54A]/90 rounded-2xl lg:w-32 w-40">
+        <div id="countdown" class="flex flex-wrap justify-center lg:justify-end md:flex-row w-full mx-auto gap-4">
+            <div class="text-center card bg-[#262262] rounded-2xl lg:w-32 w-40">
                 <div class="card-body ">
                     <span id="days" class="font-bold text-white mb-0 text-2xl lg:text-4xl"></span><br>
                     <small class="text-white mt-0 text-xs">Days</small>
                 </div>
             </div>
 
-            <div class="text-center card bg-[#39B54A]/90 rounded-2xl lg:w-32 w-40">
+            <div class="text-center card bg-[#262262] rounded-2xl lg:w-32 w-40">
                 <div class="card-body">
                     <span id="hours" class="font-bold text-white mb-0 text-2xl lg:text-4xl"></span><br>
                     <small class="text-white mt-0 text-xs">Hours</small>
                 </div>
             </div>
-            <div class="text-center card bg-[#39B54A]/90 rounded-2xl lg:w-32 w-40">
+            <div class="text-center card bg-[#262262] rounded-2xl lg:w-32 w-40">
                 <div class="card-body">
                     <span id="minutes" class="font-bold text-white mb-0 text-2xl lg:text-4xl"></span><br>
                     <small class="text-white mt-0 text-xs">Minutes</small>
                 </div>
             </div>
 
-            <div class="text-center card bg-[#39B54A]/90 rounded-2xl lg:w-32 w-40">
+            <div class="text-center card bg-[#262262] rounded-2xl lg:w-32 w-40">
                 <div class="card-body">
                     <span id="seconds" class="font-bold text-white mb-0 text-2xl lg:text-4xl"></span><br>
                     <small class="text-white mt-0 text-xs">Seconds</small>
@@ -80,6 +79,12 @@
             </div>
         </div>
     </section>
+
+    <!-- Tempat widget muncul -->
+    <div id="my-custom-widget" class="w-full h-fit"></div>
+
+    <!-- Script pemanggil -->
+    <script src="https://apfsrm2026bali.org/js/widget.js" async></script>
 
     <section class="bg-gradient-to-b from-[#262262] to-[#27AAE1] relative z-0 py-28">
         {{-- <div class="absolute inset-0 feature start-0"></div> --}}

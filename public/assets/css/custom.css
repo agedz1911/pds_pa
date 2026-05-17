@@ -6,7 +6,11 @@
 -----------------------------------------------------------------*/
 body {
     /* font-family: "Roboto", sans-serif; */
-    color: #2B3990;
+    color: #2e2e2e;
+}
+
+.logo-dark .logo {
+    content: url("../images/logo/logo-dark.png");
 }
 
 .banner {

@@ -31,11 +31,13 @@ window.onscroll = function () {
     if (document.body.scrollTop > 50 || document.documentElement.scrollTop > 50) {
         navbar.classList.add("bg-[#ffffff]");
         navbar.classList.add("top-0");
+        navbar.classList.add("logo-dark");
         navbar.classList.remove("bg-transparent");
     } else {
         navbar.classList.add("bg-transparent");
         navbar.classList.remove("bg-[#ffffff]");
         navbar.classList.remove("top-0");
+        navbar.classList.remove("logo-dark");
     }
 };
 

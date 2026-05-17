@@ -36,7 +36,7 @@
 
     <!-- Back-to-top Button start -->
     <button onclick="topFunction()" id="back-to-top"
-        class="fixed rounded z-10 bottom-5 end-5 bg-[#39B54A] text-white btn btn-sm hover:scale-105">
+        class="fixed rounded z-10 bottom-5 end-5 bg-[#FF47AF] border-none text-white btn btn-sm hover:scale-105">
         <i class="fa-solid fa-angles-up"></i>
     </button>
     <!-- Back-to-top Button end -->
