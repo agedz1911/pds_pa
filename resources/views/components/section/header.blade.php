@@ -3,15 +3,15 @@
     <div class="mx-auto flex justify-between items-center px-4">
 
         <div>
-            {{-- <a class="btn hover:bg-[#FFDE17] border-none bg-[#FF47AF] text-white btn-sm rounded-full shadow-none w-8" href="mailto:hiferi2026@pharma-pro.com">
-                <i class="fa fa-envelope">
-                </i>
-            </a> --}}
-            <a class="btn hover:bg-[#FFDE17] border-none bg-[#FF47AF] text-white btn-sm rounded-full shadow-none w-8" href="tel:+62816995230">
+            <a class="btn hover:bg-[#FFDE17] border-none bg-[#FF47AF] text-white btn-sm rounded-full shadow-none w-8" href="tel:+628111018517">
                 <i class="fa fa-phone">
                 </i>
             </a>
-            <a class="btn hover:bg-[#FFDE17] border-none bg-[#FF47AF] text-white btn-sm rounded-full shadow-none w-8" href="https://wa.me/+62816995230" target="_blank`">
+            <a class="btn hover:bg-[#FFDE17] border-none bg-[#FF47AF] text-white btn-sm rounded-full shadow-none w-8" href="https://wa.me/+628111018517" target="_blank`">
+                <i class="fa fa-whatsapp">
+                </i>
+            </a>
+            <a class="btn hover:bg-[#FFDE17] border-none bg-[#FF47AF] text-white btn-sm rounded-full shadow-none w-8" href="https://wa.me/+6288210493837">
                 <i class="fa fa-whatsapp">
                 </i>
             </a>
@@ -24,8 +24,8 @@
             <div class="border-r pr-3">
                 <span class="ml-4 hover:underline hover:text-[#FF47AF] text-sm">
                     <i class="fa fa-envelope mr-1"></i>
-                    <a href="mailto:hiferi2026@pharma-pro.com">
-                        hiferi2026@pharma-pro.com
+                    <a href="mailto:aseanpathology2026@pharma-pro.com">
+                        aseanpathology2026@pharma-pro.com
                     </a>
                 </span>
             </div>

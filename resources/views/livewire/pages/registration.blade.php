@@ -1,20 +1,23 @@
 <div>
-    <section class="breadcrumbs relative pb-0">
-        <div class="absolute inset-0 bg-gradient-to-t from-[#27AAE1]/80 to-[#39B54A]/10"></div>
+    {{-- <section class="breadcrumbs relative pb-0">
+        <div class="absolute inset-0 bg-gradient-to-t from-[#27AAE1]/80 to-[#FF47AF]/10"></div>
         <div class="py-16 lg:py-28 text-center relative">
             <h2 class=" uppercase text-2xl font-bold tracking-wide lg:text-4xl">Registration</h2>
         </div>
-    </section>
+    </section> --}}
+    <h2 class="md:text-4xl text-xl font-semibold uppercase text-center mt-10"> <span
+            class="text-[#FF47AF]">Registration
+        </span></h2>
 
     <section class="px-5 md:px-10 pt-0 pb-10 md:py-20 bg-competition">
         <div class="tabs tabs-border justify-evenly">
-            <input type="radio" name="my_tabs_2" class="tab text-lg uppercase text-[#39B54A]"
+            <input type="radio" name="my_tabs_2" class="tab text-lg uppercase text-[#FF47AF]"
                 aria-label="Indonesian Participant" checked="checked" />
             <div class="tab-content">
                 <div class="pb-6 text-gray-500">
                     @foreach ($uniqueLocals as $category)
                     @if ($category == 'symposium')
-                    <h2 class="uppercase font-semibold text-[#39B54A] mb-2 mt-5">{{$category}}</h2>
+                    <h2 class="uppercase font-semibold text-[#FF47AF] mb-2 mt-5">{{$category}}</h2>
                     <div class="relative overflow-x-auto shadow sm:rounded-lg ">
                         <table class="w-full text-sm text-left rtl:text-right text-gray-500 ">
                             <thead class=" text-white uppercase text-center bg-[#262262] ">
@@ -63,12 +66,12 @@
                         </table>
                         <div class="relative mt-2">
                             <a href="javascript:void(0)"
-                                class="btn bg-[#39B54A] text-white hover:bg-[#288b35] btn-lg rounded-xl mb-3 float-end text-sm"><i
+                                class="btn bg-[#FF47AF] text-white hover:bg-[#288b35] btn-lg rounded-xl mb-3 float-end text-sm"><i
                                     class="fa-solid fa-list mx-3"></i>Register Now!</a>
                         </div>
                     </div>
                     @elseif ($category == 'workshop')
-                    <h2 class="uppercase font-semibold text-[#39B54A] mb-2 mt-5">{{$category}}</h2>
+                    <h2 class="uppercase font-semibold text-[#FF47AF] mb-2 mt-5">{{$category}}</h2>
                     <div class="grid lg:grid-cols-3 md:grid-cols-2 grid-cols-1 gap-4">
                         @foreach ($regLocals as $regLocal)
                         @if ($regLocal->category_reg == $category)
@@ -83,7 +86,7 @@
                                 {!! str($regLocal->description)->markdown()->sanitizeHtml() !!}
                                 <div class="mt-6">
                                     <a href="javascript:void(0)"
-                                        class="btn bg-[#39B54A] text-white hover:bg-[#39B54A]  rounded-xl mb-3 btn-block"><i
+                                        class="btn bg-[#FF47AF] text-white hover:bg-[#FF47AF]  rounded-xl mb-3 btn-block"><i
                                             class="fa-solid fa-list mx-3"></i>Register Now!</a>
                                 </div>
                             </div>
@@ -92,7 +95,7 @@
                         @endforeach
                     </div>
                     @else
-                    <h2 class="uppercase font-semibold text-[#39B54A] mb-2 mt-5">{{$category}}</h2>
+                    <h2 class="uppercase font-semibold text-[#FF47AF] mb-2 mt-5">{{$category}}</h2>
                     <div class="relative overflow-x-auto shadow sm:rounded-lg ">
                         <table class="w-full text-sm text-left rtl:text-right text-gray-500 ">
                             <thead class=" text-white uppercase text-center bg-[#262262] ">
@@ -136,7 +139,7 @@
                         </table>
                         <div class="relative mt-2">
                             <a href="javascript:void(0)"
-                                class="btn bg-[#39B54A] text-white hover:bg-[#39B54A] btn-lg rounded-xl mb-3 float-end text-sm"><i
+                                class="btn bg-[#FF47AF] text-white hover:bg-[#FF47AF] btn-lg rounded-xl mb-3 float-end text-sm"><i
                                     class="fa-solid fa-list mx-3"></i>Register Now!</a>
                         </div>
                     </div>
@@ -146,13 +149,13 @@
                 </div>
             </div>
 
-            <input type="radio" name="my_tabs_2" class="tab uppercase text-lg text-[#39B54A] "
+            <input type="radio" name="my_tabs_2" class="tab uppercase text-lg text-[#FF47AF] "
                 aria-label="Foreign Participant" />
             <div class="tab-content">
                 <div class="pb-6 text-gray-500">
                     @foreach ($uniqueForeigns as $category)
                     @if ($category == 'symposium')
-                    <h2 class="uppercase font-semibold text-[#39B54A] mb-2 mt-5">{{$category}}</h2>
+                    <h2 class="uppercase font-semibold text-[#FF47AF] mb-2 mt-5">{{$category}}</h2>
                     <div class="relative overflow-x-auto shadow sm:rounded-lg ">
                         <table class="w-full text-sm text-left rtl:text-right text-gray-500 ">
                             <thead class=" text-white uppercase text-center bg-[#262262] ">
@@ -204,12 +207,12 @@
                         </table>
                         <div class="relative mt-2">
                             <a href="javascript:void(0)"
-                                class="btn bg-[#39B54A] text-white hover:bg-[#278032] btn-lg rounded-xl mb-3 float-end text-sm"><i
+                                class="btn bg-[#FF47AF] text-white hover:bg-[#278032] btn-lg rounded-xl mb-3 float-end text-sm"><i
                                     class="fa-solid fa-list mx-3"></i>Register Now!</a>
                         </div>
                     </div>
                     @elseif ($category == 'workshop')
-                    <h2 class="uppercase font-semibold text-[#39B54A] mb-2 mt-5">{{$category}}</h2>
+                    <h2 class="uppercase font-semibold text-[#FF47AF] mb-2 mt-5">{{$category}}</h2>
                     <div class="relative overflow-x-auto shadow sm:rounded-lg ">
                         <table class="w-full text-sm text-left rtl:text-right text-gray-500 ">
                             <thead class=" text-white uppercase text-center bg-[#262262] ">
@@ -251,12 +254,12 @@
                         </table>
                         <div class="relative mt-2">
                             <a href="javascript:void(0)"
-                                class="btn bg-[#39B54A] text-white hover:bg-[#39B54A] btn-lg rounded-xl mb-3 float-end text-sm"><i
+                                class="btn bg-[#FF47AF] text-white hover:bg-[#FF47AF] btn-lg rounded-xl mb-3 float-end text-sm"><i
                                     class="fa-solid fa-list mx-3"></i>Register Now!</a>
                         </div>
                     </div>
                     @elseif ($category == 'workshop microsurgery')
-                    <h2 class="uppercase font-semibold text-[#39B54A] mb-2 mt-5">{{$category}}</h2>
+                    <h2 class="uppercase font-semibold text-[#FF47AF] mb-2 mt-5">{{$category}}</h2>
                     <div class="relative overflow-x-auto shadow sm:rounded-lg ">
                         <table class="w-full text-sm text-left rtl:text-right text-gray-500 ">
                             <thead class=" text-white uppercase text-center bg-[#262262] ">
@@ -298,12 +301,12 @@
                         </table>
                         <div class="relative mt-2">
                             <a href="javascript:void(0)"
-                                class="btn bg-[#39B54A] text-white hover:bg-[#39B54A] btn-lg rounded-xl mb-3 float-end text-sm"><i
+                                class="btn bg-[#FF47AF] text-white hover:bg-[#FF47AF] btn-lg rounded-xl mb-3 float-end text-sm"><i
                                     class="fa-solid fa-list mx-3"></i>Register Now!</a>
                         </div>
                     </div>
                     @else
-                    <h2 class="uppercase font-semibold text-[#39B54A] mb-2 mt-5">{{$category}}</h2>
+                    <h2 class="uppercase font-semibold text-[#FF47AF] mb-2 mt-5">{{$category}}</h2>
                     <div class="relative overflow-x-auto shadow sm:rounded-lg ">
                         <table class="w-full text-sm text-left rtl:text-right text-gray-500 ">
                             <thead class=" text-white uppercase text-center bg-[#262262] ">
@@ -347,7 +350,7 @@
                         </table>
                         <div class="relative mt-2">
                             <a href="javascript:void(0)"
-                                class="btn bg-[#39B54A] text-white hover:bg-[#39B54A] btn-lg rounded-xl mb-3 float-end text-sm"><i
+                                class="btn bg-[#FF47AF] text-white hover:bg-[#FF47AF] btn-lg rounded-xl mb-3 float-end text-sm"><i
                                     class="fa-solid fa-list mx-3"></i>Register Now!</a>
                         </div>
                     </div>
@@ -364,7 +367,7 @@
         <div class=" mt-10">
             <div class="text-center lg:text-start">
                 <h2 class="mb-2 uppercase text-3xl font-semibold">Registration
-                    <span class="text-[#39B54A]">information</span>
+                    <span class="text-[#FF47AF]">information</span>
                 </h2>
             </div>
 

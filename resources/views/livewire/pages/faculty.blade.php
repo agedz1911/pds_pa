@@ -1,10 +1,13 @@
 <div>
-    <section class="breadcrumbs relative pb-0">
-        <div class="absolute inset-0 bg-gradient-to-t from-[#27AAE1]/80 to-[#39B54A]/10"></div>
+    {{-- <section class="breadcrumbs relative pb-0">
+        <div class="absolute inset-0 bg-gradient-to-t from-[#27AAE1]/80 to-[#FF47AF]/10"></div>
         <div class="py-16 lg:py-28 text-center relative">
             <h2 class=" uppercase text-2xl font-bold tracking-wide lg:text-4xl">faculties</h2>
         </div>
-    </section>
+    </section> --}}
+    <h2 class="md:text-4xl text-xl font-semibold uppercase text-center mt-10"> <span
+            class="text-[#FF47AF]">Faculties
+        </span></h2>
 
     <section class="mx-auto w-full px-5 md:px-10 pt-0 pb-10 md:py-20">
         <div class="">
@@ -19,7 +22,7 @@
                 <!-- name of each tab group should be unique -->
                 <div class="tabs tabs-border justify-evenly mb-5">
                     <input type="radio" name="my_tabs_2"
-                        class="tab uppercase tracking-wider text-lg hover:text-[#262262] text-[#39B54A]"
+                        class="tab uppercase tracking-wider text-lg hover:text-[#262262] text-[#FF47AF]"
                         aria-label="Indonesian Faculties" />
                     <div class="tab-content  p-5 rounded-lg">
                         <div class="grid grid-cols-1 md:grid-cols-3 lg:grid-cols-4 gap-5">
@@ -34,7 +37,7 @@
                                 </figure>
                                 <div class="card-body text-center">
                                     <h2 onclick="my_modal_{{$loop->index}}.showModal()"
-                                        class="text-xl font-semibold text-[#39B54A] hover:text-[#262262] hover:cursor-pointer">
+                                        class="text-xl font-semibold text-[#FF47AF] hover:text-[#262262] hover:cursor-pointer">
                                         {{$indo->name}}
                                     </h2>
                                     <p>{{$indo->description}}</p>
@@ -54,7 +57,7 @@
                                             assets/images/speaker.png"}}" alt="Photo">
                                         <div>
                                             <p class="mb-0"><span
-                                                    class="text-[#39B54A] text-lg font-semibold">{{$indo->name}}</span>
+                                                    class="text-[#FF47AF] text-lg font-semibold">{{$indo->name}}</span>
                                                 <br>
                                                 {{$indo->country}}
                                             </p>
@@ -94,7 +97,7 @@
                     </div>
 
                     <input type="radio" name="my_tabs_2"
-                        class="tab uppercase tracking-wider  text-lg hover:text-[#262262] text-[#39B54A]"
+                        class="tab uppercase tracking-wider  text-lg hover:text-[#262262] text-[#FF47AF]"
                         aria-label="International faculties" checked="checked" />
                     <div class="tab-content  p-5 rounded-lg">
                         {{-- @dd($indofaculties) --}}
@@ -111,7 +114,7 @@
                                 </figure>
                                 <div class="card-body text-center">
                                     <h2 onclick="my_modal_f{{$loop->index}}.showModal()"
-                                        class="text-xl font-semibold text-[#39B54A] hover:cursor-pointer hover:text-[#262262]">
+                                        class="text-xl font-semibold text-[#FF47AF] hover:cursor-pointer hover:text-[#262262]">
                                         {{$foreign->name}}
                                     </h2>
                                     <div class="flex justify-center">
@@ -138,7 +141,7 @@
                                             assets/images/speaker.png"}}" alt="{{$foreign->name}}">
                                         <div>
                                             <p class="mb-0"><span
-                                                    class="text-[#39B54A] text-lg font-semibold">{{$foreign->name}}</span>
+                                                    class="text-[#FF47AF] text-lg font-semibold">{{$foreign->name}}</span>
                                                 <br>
                                                 {{$foreign->country}}
                                             </p>

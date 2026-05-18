@@ -25,17 +25,39 @@
                     <p class="italic mt-3 text-[#FFDE17] font-bold md:text-3xl">" Precision in Practise: Frontiers in
                         Gynaecological, Thoraric and Oral Pathology "</p>
                 </div>
-                <p class="text-[#ececec] mt-3">
-                    November 7<sup>th</sup> - 8<sup>th</sup>, 2026 <br> The Ritz-Carlton Mega Kuningan, Jakarta,
-                    Indonesia
-                </p>
-                <div class="mt-7 w-full gap-1 flex flex-wrap">
-                    <a
-                        class="text-white hover:cursor-pointer border-slate-50/30 border bg-[#262262] hover:border-[#262262] focus:ring-4 focus:outline-none focus:ring-[#262262] font-medium rounded-lg text-sm px-5 md:px-10 py-3 text-center  dark:border-[#262262] dark:text-[#262262] dark:hover:text-white dark:hover:bg-white dark:focus:ring-white"><i
-                            class="fa-solid fa-file-download mr-1 text-xs"></i>Download Announcement </a>
-                    <a href="/registration" wire:navigate
-                        class="btn text-sm px-5 md:px-10 py-3 text-center rounded-lg btn-lg btn-soft btn-secondary"><i
-                            class="fa-solid fa-pen-to-square"></i> Register Now </a>
+                <div class="flex flex-col md:flex-row lg:justify-start justify-center items-center gap-3 mt-8">
+                    <div
+                        class="z-10 hover:cursor-pointer max-w-sm p-4 bg-white border border-sky-50 rounded-lg shadow-md hover:bg-[#f4f4fc]">
+                        <div class="flex items-center">
+                            <div class="shrink-0 bg-[#302b88] p-4 rounded-full">
+                                <i class="fa fa-calendar-o text-xl text-white"></i>
+                            </div>
+                            <div class="flex-1 min-w-0 ms-4">
+                                <p class="text-sm font-medium  truncate">
+                                    Saturday to Sunday
+                                </p>
+                                <p class="text-sm text-gray-500 truncate">
+                                    November 7<sup>th</sup> - 8<sup>th</sup>, 2026
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                    <div
+                        class="z-10 hover:cursor-pointer max-w-sm p-4 bg-white border border-sky-50 rounded-lg shadow-md hover:bg-[#f4f4fc]">
+                        <div class="flex items-center px-5">
+                            <div class="shrink-0 bg-[#302b88] p-4 rounded-full">
+                                <i class="fa fa-map-marker text-xl text-white"></i>
+                            </div>
+                            <div class="flex-1 min-w-0 ms-4">
+                                <p class="text-sm font-medium  truncate ">
+                                    The Ritz-Carlton
+                                </p>
+                                <p class="text-sm text-gray-500 truncate">
+                                    Jakarta Mega Kuningan
+                                </p>
+                            </div>
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>
@@ -80,47 +102,25 @@
         </div>
     </section>
 
-    <!-- Tempat widget muncul -->
-    <div id="my-custom-widget" class="w-full h-fit"></div>
+    <section class="lg:pb-16 pb-20 mt-10 grid grid-cols-1 lg:grid-cols-2 px-3 lg:px-8 gap-3">
+        <div class=" px-3 lg:px-8">
+            <div class="w-full">
+                <div class="text-center pb-6 m-auto">
+                    <h2 class="mb-5 md:mb-8 text-3xl text-[#262262] font-bold uppercase">important <span class="">Dates</span></h2>
+                </div>
+                <livewire:section.important-date />
+            </div>
+        </div>
 
-    <!-- Script pemanggil -->
-    <script src="https://apfsrm2026bali.org/js/widget.js" async></script>
+        <div class="">
+            <livewire:section.flyer />
+        </div>
+    </section>
 
     <section class="bg-gradient-to-b from-[#262262] to-[#27AAE1] relative z-0 py-28">
         {{-- <div class="absolute inset-0 feature start-0"></div> --}}
         <div class="relative">
-
-            <div class="">
-                <h2 class="text-4xl text-white font-semibold uppercase text-center mb-10">Welcome <span
-                        class="text-[#39B54A]">message
-                    </span></h2>
-                <div class="flex flex-col md:flex-row justify-center">
-                    @foreach ($welcomeMessages as $welcomeMessage)
-                    <div class="mb-5 w-full max-w-3xl items-start px-2 lg:px-8">
-                        <div class="pb-4 text-justify text-white">
-                            {!! Str::limit(str($welcomeMessage->description)->markdown()->sanitizeHtml(), 450) !!} <br>
-                            <a class="text-pink-200 hover:text-white hover:underline" href="/welcome-message">Read
-                                More...</a>
-                        </div>
-                        <div>
-                            <div class="avatar">
-                                <img src="{{$welcomeMessage->image ? asset('storage/' . $welcomeMessage->image) : "
-                                    assets/images/speaker.png"}}" alt="{{$welcomeMessage->name}}"
-                                    class="w-full max-w-52 shadow-md rounded-lg ">
-                            </div>
-                        </div>
-                        <div class="p-4 rounded-xl bg-[#39B54A] w-full max-w-sm mt-3 mb-5">
-                            <div class="p-2 border-s border-white border-spacing-7">
-                                <p class="text-white text-xs italic"> {{$welcomeMessage->title}}
-                                </p>
-                                <h6 class="font-semibold text-white">{{$welcomeMessage->name}}</h6>
-                            </div>
-                        </div>
-                    </div>
-                    @endforeach
-                </div>
-            </div>
-            <div class="w-full max-w-6xl mx-auto border-t mt-10 pt-10 border-white border-opacity-35">
+            <div class="w-full max-w-6xl mx-auto border-b mb-10 pb-10 border-white border-opacity-35">
                 <div class="mb-16">
                     <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4">
                         <div class="w-full border-e border-opacity-35 border-white ">
@@ -158,118 +158,64 @@
                     </div>
                 </div>
             </div>
-        </div>
-    </section>
-
-    <section class="lg:pb-16 pb-20 mt-10 grid grid-cols-1 lg:grid-cols-2 px-3 lg:px-8 gap-3">
-        <div class=" px-3 lg:px-8">
-            <img src="assets/images/logo/logo-all.png" alt="Icon" class="w-60 mb-5" class="">
-            <div class="flex gap-1 mt-6">
-                <div>
-                    <img src="{{asset('assets/images/logo/icon.png')}}" class="w-full max-w-40" alt="">
-                </div>
-                <div class="w-full ">
-                    <h1 class="text-xl lg:text-2xl text-[#302b88] font-bold mb-0 ">
-                        KONAS IX
-                    </h1>
-                    <h1 class="font-bold text-6xl lg:text-8xl tracking-widest text-[#39B54A] mt-0">HIFERI</h1>
-                    <div class="flex flex-row w-full">
-                        <p class="text-sm">The 9<sup>th</sup> National Congress of</p>
-                    </div>
-                    <p class="text-sm tracking-tighter">Indonesian Association of Reproductive Endocrinology and
-                        Fertility</p>
-                </div>
-            </div>
-            <div class="w-full max-w-2xl">
-                <p class="italic mt-3 text-[#302b88] font-bold md:text-xl">" Empowering Reproductive Endocrinology
-                    and Infertility Clinicians:
-                    Dedicated to Care, Driven by Innovation, Defined by Success. "</p>
-            </div>
-            <div class="flex flex-col md:flex-row lg:justify-start justify-center items-center gap-3 mt-8">
-                <div
-                    class="z-10 hover:cursor-pointer max-w-sm p-6 bg-white border border-sky-50 rounded-lg shadow-md hover:bg-[#f4f4fc]">
-                    <div class="flex items-center">
-                        <div class="shrink-0 bg-[#302b88] p-4 rounded-full">
-                            <i class="fa fa-calendar-o text-xl text-white"></i>
-                        </div>
-                        <div class="flex-1 min-w-0 ms-4">
-                            <p class="text-sm font-medium  truncate">
-                                Thursday to Sunday
-                            </p>
-                            <p class="text-sm text-gray-500 truncate">
-                                October 8<sup>th</sup> - 11<sup>th</sup>, 2026
-                            </p>
-                        </div>
-                    </div>
-                </div>
-                <div
-                    class="z-10 hover:cursor-pointer max-w-sm p-6 bg-white border border-sky-50 rounded-lg shadow-md hover:bg-[#f4f4fc]">
-                    <div class="flex items-center px-5">
-                        <div class="shrink-0 bg-[#302b88] p-4 rounded-full">
-                            <i class="fa fa-map-marker text-xl text-white"></i>
-                        </div>
-                        <div class="flex-1 min-w-0 ms-4">
-                            <p class="text-sm font-medium  truncate ">
-                                Holiday Inn
-                            </p>
-                            <p class="text-sm text-gray-500 truncate">
-                                Pasteur, Bandung
-                            </p>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-
-        <div class="">
-            <livewire:section.flyer />
-        </div>
-    </section>
-
-    <section class="lg:py-16 py-20 bg-[#52da64]/10 relative z-0 bg-competition">
-        <div class="w-full pt-5">
-            <div class="text-center pb-6 m-auto">
-                <h2 class="mb-5 md:mb-8 text-3xl font-bold uppercase">important <span class="">Dates</span></h2>
-            </div>
-            <livewire:section.important-date />
-        </div>
-    </section>
-
-    <section class="w-full pt-24 pb-3 px-2 lg:px-4 ">
-        <div class="border-b-2 border-dashed border-[#302b88]/50 pb-10">
             <div class="">
-                <div class="text-center pb-6 w-60 m-auto">
-                    {{-- <span class="mb-1  text-sm">49<sup>th</sup> ASMIUA</span> --}}
-                    <h2 class="mb-1 text-[#302b88] text-xl md:text-3xl font-bold uppercase">SPONSors</h2>
-                </div>
-                <div class="mt-10">
-                    <div class="grid grid-cols-2 md:grid-cols-5 gap-4 items-center justify-center">
-                        @foreach ($sponsors as $sponsor)
-                        <div class="p-0 border-r border-gray-300 last:border-0">
-                            <div class="p-2 opacity-75 hover:opacity-100 text-center">
-                                <a href="{{$sponsor->website ? $sponsor->website : 'javascript:void(0)'}}"
-                                    target="_blank">
-                                    {!! $sponsor->logo ? '<img src="' . asset('storage/' . $sponsor->logo) . '"
-                                        class="img-fluid" alt="' . $sponsor->company . '" />' : '<small
-                                        class="text-center text-accent">' . $sponsor->company . '</small>' !!}
-                                </a>
+                <h2 class="text-4xl text-white font-semibold uppercase text-center mt-10">Welcome <span
+                        class="text-[#FF47AF]">message
+                    </span></h2>
+                <livewire:pages.welcome-message />
+                {{-- <div class="flex flex-col md:flex-row justify-center">
+                    @foreach ($welcomeMessages as $welcomeMessage)
+                    <div class="mb-5 w-full max-w-3xl items-start px-2 lg:px-8">
+                        <div class="pb-4 text-justify text-white">
+                            {!! Str::limit(str($welcomeMessage->description)->markdown()->sanitizeHtml(), 450) !!} <br>
+                            <a class="text-pink-200 hover:text-white hover:underline" href="/welcome-message">Read
+                                More...</a>
+                        </div>
+                        <div>
+                            <div class="avatar">
+                                <img src="{{$welcomeMessage->image ? asset('storage/' . $welcomeMessage->image) : "
+                                    assets/images/speaker.png"}}" alt="{{$welcomeMessage->name}}"
+                                    class="w-full max-w-52 shadow-md rounded-lg ">
                             </div>
                         </div>
-                        @endforeach
+                        <div class="p-4 rounded-xl bg-[#FF47AF] w-full max-w-sm mt-3 mb-5">
+                            <div class="p-2 border-s border-white border-spacing-7">
+                                <p class="text-white text-xs italic"> {{$welcomeMessage->title}}
+                                </p>
+                                <h6 class="font-semibold text-white">{{$welcomeMessage->name}}</h6>
+                            </div>
+                        </div>
                     </div>
-                </div>
-                <div class="text-center my-10">
-                    <a class="btn bg-[#39B54A] hover:bg-[#2d8d3a] text-white rounded-xl uppercase" href="/sponsors">VIEW
-                        MORE Sponsors</a>
-                </div>
+                    @endforeach
+                </div> --}}
             </div>
         </div>
     </section>
 
     <section class="w-full pt-24 pb-3 px-2 lg:px-4">
+        <livewire:pages.committee />
+    </section>
+
+    <section class="w-full pt-24 pb-3 px-2 lg:px-4">
+        <livewire:pages.faculty />
+    </section>
+    <section class="w-full pt-24 pb-3 px-2 lg:px-4">
+        <livewire:pages.at-glance />
+    </section>
+    <section class="w-full pt-24 pb-3 px-2 lg:px-4">
+        <livewire:pages.schedule />
+    </section>
+    <section class="w-full pt-24 pb-3 px-2 lg:px-4">
+        <livewire:pages.registration />
+    </section>
+    <section class="w-full pt-24 pb-3 px-2 lg:px-4">
+        <livewire:pages.guideline-abstract />
+    </section>
+
+    <section class="w-full pt-24 pb-3 px-2 lg:px-4">
         <div class="text-center mb-5 pb-10">
-            <h2 class="md:text-3xl text-xl font-semibold uppercase mb-1">GET DIRECTION TO THE <span
-                    class="text-[#302b88]">Venue</span></h2>
+            <h2 class="md:text-4xl text-xl font-semibold uppercase mb-1">GET DIRECTION TO THE <span
+                    class="text-[#FF47AF]">Venue</span></h2>
         </div>
         <div class="">
             <div class="flex flex-col lg:flex-row gap-5">
@@ -278,44 +224,40 @@
                         <div class="">
                             <h5 class="pb-2 tracking-wide font-semibold">EVENT VENUE :
                             </h5>
-                            <p class="pb-5 m-0 text-sm"> Holiday Inn, Pasteur, Bandung </p>
+                            <p class="pb-5 m-0 text-sm"> The Ritz-Carlton Jakarta Mega Kuningan </p>
                             <h5 class="pb-2 tracking-wide font-semibold">ADDRESS :
                             </h5>
-                            <p class="pb-5 m-0 text-sm"> Jl. Dr. Djunjunan No.96, Pasteur, Bandung City, West Java </p>
+                            <p class="pb-5 m-0 text-sm"> Jl. DR. Ide Anak Agung Gde Agung No.1 Kav.E, Kuningan,
+                                South jakarta, Indonesia </p>
 
                             <!-- <h5 class="text-white pb-2">RECEPTION INFO:</h5>
                                     <p class="pb-5 m-0">Booking: (+62) 1919-2020</p> -->
-                            <a href="https://www.google.com/maps/dir//Holiday+Inn+Bandung+Pasteur,+Jl.+Dr.+Djunjunan+No.96,+Pasteur,+Kec.+Sukajadi,+Kota+Bandung,+Jawa+Barat+40162/@-6.8960897,107.5906402,17z/data=!4m19!1m10!3m9!1s0x2e68e665b08b263d:0x2edd60e3b317f7b4!2sHoliday+Inn+Bandung+Pasteur!5m2!4m1!1i2!8m2!3d-6.8960897!4d107.5906402!16s%2Fg%2F1td8w6x8!4m7!1m0!1m5!1m1!1s0x2e68e665b08b263d:0x2edd60e3b317f7b4!2m2!1d107.5906402!2d-6.8960897?entry=ttu&g_ep=EgoyMDI2MDQxNS4wIKXMDSoASAFQAw%3D%3D"
-                                target="_blank" class="hover:text-[#39B54A]">Get Directions</a>
+                            <a href="https://www.google.com/maps/dir//Ritz-Carlton+Jakarta,+RT.5%2FRW.2,+Kuningan,+East+Kuningan,+Setiabudi,+South+Jakarta+City,+Jakarta+12950/@-6.2285518,106.8246668,17z/data=!4m8!4m7!1m0!1m5!1m1!1s0x2e69f3e522f87729:0xdefece2f325ccb3d!2m2!1d106.8272417!2d-6.2285571?entry=ttu&g_ep=EgoyMDI2MDUxMy4wIKXMDSoASAFQAw%3D%3D"
+                                target="_blank" class="hover:text-[#FF47AF]">Get Directions</a>
                         </div>
                     </div>
                 </div>
                 <div class="lg:w-2/3 w-full px-1 flex flex-col md:flex-row gap-2">
-                    <iframe class="rounded-lg w-full "
-                        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3960.954133989028!2d107.5906402!3d-6.8960897!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2e68e665b08b263d%3A0x2edd60e3b317f7b4!2sHoliday%20Inn%20Bandung%20Pasteur!5e0!3m2!1sid!2sid!4v1776679432573!5m2!1sid!2sid"
-                        width="600" style="border:0;" allowfullscreen="" loading="lazy"
-                        referrerpolicy="no-referrer-when-downgrade"></iframe>
-
-
+                    <iframe class="rounded-lg w-full " src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3966.266510804608!2d106.82466677478348!3d-6.228551760998128!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2e69f3e522f87729%3A0xdefece2f325ccb3d!2sRitz-Carlton%20Jakarta%2C%20RT.5%2FRW.2%2C%20Kuningan%2C%20East%20Kuningan%2C%20Setiabudi%2C%20South%20Jakarta%20City%2C%20Jakarta%2012950!5e0!3m2!1sen!2sid!4v1779089793373!5m2!1sen!2sid" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
                 </div>
             </div>
 
             <div class="grid grid-cols-1 md:grid-cols-3 gap-2 mt-5 justify-items-center">
 
                 <div class="w-full ">
-                    <a><img src="{{asset('assets/images/bandung/1.jpg')}}"
-                            class="w-full max-h-96 object-cover rounded-xl shadow-md saturate-150"
-                            alt="venue bandung "></a>
+                    <a><img src="{{asset('assets/images/jakarta/4.jpg')}}"
+                            class="w-full max-h-64 object-cover rounded-xl shadow-md saturate-150"
+                            alt="venue jakarta "></a>
                 </div>
                 <div class="w-full ">
-                    <a><img src="{{asset('assets/images/bandung/2.webp')}}"
-                            class="w-full max-h-96 object-cover rounded-xl shadow-md saturate-150"
-                            alt="venue bandung "></a>
+                    <a><img src="{{asset('assets/images/jakarta/5.jpg')}}"
+                            class="w-full max-h-64 object-cover rounded-xl shadow-md saturate-150"
+                            alt="venue jakarta "></a>
                 </div>
                 <div class="w-full ">
-                    <a><img src="{{asset('assets/images/bandung/3.webp')}}"
-                            class="w-full max-h-96 object-cover object-top rounded-xl shadow-md sepia-50"
-                            alt="venue bandung "></a>
+                    <a><img src="{{asset('assets/images/jakarta/6.jpg')}}"
+                            class="w-full max-h-64 object-cover object-top rounded-xl shadow-md sepia-50"
+                            alt="venue jakarta "></a>
                 </div>
             </div>
         </div>
@@ -341,7 +283,7 @@
         // Get current date and time
         const currentTime = new Date();
 
-        const targetTime = new Date(2026, 9, 8, 08, 00, 00);
+        const targetTime = new Date(2026, 10, 7, 08, 00, 00);
 
         // Update countdown time
         function updateCountdown() {

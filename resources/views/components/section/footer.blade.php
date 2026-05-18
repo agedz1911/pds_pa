@@ -6,7 +6,7 @@
             </path>
         </svg>
     </div>
-    <div class="absolute inset-0 bg-gradient-to-b from-[#27AAE1] to-[#150F70]/90"></div>
+    <div class="absolute inset-0 bg-gradient-to-b from-[#b82578] to-[#150F70]/90"></div>
     <div class="relative">
         <div class="flex flex-col items-center w-full max-w-4xl m-auto">
 
@@ -19,37 +19,38 @@
                     Jakarta 10130, Indonesia</p>
                 <div class="py-5 mt-3">
                     <ul class="m-0 p-0 flex flex-row gap-5 lg:gap-8 justify-center">
-                        <li class="bg-[#39B54A] rounded-md p-2 w-10 hover:bg-[#1e882c] tooltip-bottom tooltip"
-                            data-tip="hiferi2026@pharma-pro.com">
-                            <a href="mailto:hiferi2026@pharma-pro.com" class="">
+                        <li class="bg-[#262262] rounded-md p-2 w-10 hover:bg-[#FF47AF] tooltip-bottom tooltip"
+                            data-tip="aseanpathology2026@pharma-pro.com">
+                            <a href="mailto:aseanpathology2026@pharma-pro.com" class="">
                                 <i class="fa-solid fa-envelope-open-text text-xl"></i>
                             </a>
                         </li>
-                        <li class="bg-[#39B54A] rounded-md p-2 w-10 hover:bg-[#1e882c] tooltip-bottom tooltip"
+                        <li class="bg-[#262262] rounded-md p-2 w-10 hover:bg-[#FF47AF] tooltip-bottom tooltip"
                             data-tip="+6221 6386 9502">
                             <a href="tel:+622163869502" class="">
                                 <i class="fa fa-phone text-xl"></i>
                             </a>
                         </li>
-                        <li class="bg-[#39B54A] rounded-md p-2 w-10 hover:bg-[#1e882c] tooltip-bottom tooltip"
-                            data-tip="+62 816-995-230">
-                            <a href="tel:+62816995230" class="">
+                        <li class="bg-[#262262] rounded-md p-2 w-10 hover:bg-[#FF47AF] tooltip-bottom tooltip"
+                            data-tip="+62 811-1018-517">
+                            <a href="tel:+628111018517" class="">
                                 <i class="fa fa-mobile-screen text-xl"></i>
                             </a>
                         </li>
-                        <li class="bg-[#39B54A] rounded-md p-2 w-10 hover:bg-[#1e882c] tooltip-bottom tooltip"
-                            data-tip="+62 816-995-230 ">
-                            <a href="https://wa.me/+62816995230" class="">
+                        <li class="bg-[#262262] rounded-md p-2 w-10 hover:bg-[#FF47AF] tooltip-bottom tooltip"
+                            data-tip="+62 811-1018-517">
+                            <a href="https://wa.me/+628111018517" class="">
+                                <i class="fa fa-whatsapp text-xl"></i>
+                            </a>
+                        </li>
+                        <li class="bg-[#262262] rounded-md p-2 w-10 hover:bg-[#FF47AF] tooltip-bottom tooltip"
+                            data-tip="+62 882-1049-3837">
+                            <a href="https://wa.me/+6288210493837" class="">
                                 <i class="fa fa-whatsapp text-xl"></i>
                             </a>
                         </li>
 
-                        <li class="bg-[#39B54A] rounded-md p-2 w-10 hover:bg-[#1e882c] tooltip-bottom tooltip"
-                            data-tip="@ig">
-                            <a href="javascript:void(0)" class="">
-                                <i class="fa fa-instagram text-xl"></i>
-                            </a>
-                        </li>
+                        
                     </ul>
                 </div>
             </div>

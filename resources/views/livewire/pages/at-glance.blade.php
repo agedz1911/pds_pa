@@ -1,13 +1,16 @@
 <div>
-    <section class="breadcrumbs relative pb-0">
-        <div class="absolute inset-0 bg-gradient-to-t from-[#27AAE1]/80 to-[#39B54A]/10"></div>
+    {{-- <section class="breadcrumbs relative pb-0">
+        <div class="absolute inset-0 bg-gradient-to-t from-[#27AAE1]/80 to-[#FF47AF]/10"></div>
         <div class="py-16 lg:py-28 text-center relative">
             <h2 class=" uppercase text-2xl font-bold tracking-wide lg:text-4xl">program at glance</h2>
         </div>
-    </section>
+    </section> --}}
+    <h2 class="md:text-4xl text-xl font-semibold uppercase text-center mt-10">program at <span
+            class="text-[#FF47AF]">glance
+        </span></h2>
 
     <div class="px-5 lg:px-10 mt-10">
-        <label class="input input-lg input-success rounded-lg w-full">
+        <label class="input input-lg input-secondary rounded-lg w-full">
             <i class="fa fa-search opacity-45 text-sm"></i>
             <input wire:model.live='search' type="text" class="grow" placeholder="Search Topics, And Sessions" />
         </label>
@@ -19,19 +22,19 @@
             <div x-data="{ openTab: 3 }" class="lg:w-11/12 w-full mx-auto">
                 <div class="">
                     <div class="mb-4 flex flex-wrap space-x-4 p-2 bg-white rounded-lg shadow-md">
-                        {{-- <button x-on:click="openTab = 5" :class="{ 'bg-[#39B54A] text-white': openTab === 5 }"
+                        {{-- <button x-on:click="openTab = 5" :class="{ 'bg-[#FF47AF] text-white': openTab === 5 }"
                             class="flex-1 py-2 px-4 rounded-md focus:outline-none focus:shadow-outline-blue transition-all duration-300">8
                             October</button> --}}
-                        <button x-on:click="openTab = 1" :class="{ 'bg-[#39B54A] text-white': openTab === 1 }"
+                        <button x-on:click="openTab = 1" :class="{ 'bg-[#FF47AF] text-white': openTab === 1 }"
                             class="flex-1 py-2 px-4 rounded-md focus:outline-none focus:shadow-outline-blue transition-all duration-300">8
                             October</button>
-                        <button x-on:click="openTab = 2" :class="{ 'bg-[#39B54A] text-white': openTab === 2 }"
+                        <button x-on:click="openTab = 2" :class="{ 'bg-[#FF47AF] text-white': openTab === 2 }"
                             class="flex-1 py-2 px-4 rounded-md focus:outline-none focus:shadow-outline-blue transition-all duration-300">9
                             October</button>
-                        <button x-on:click="openTab = 3" :class="{ 'bg-[#39B54A] text-white': openTab === 3 }"
+                        <button x-on:click="openTab = 3" :class="{ 'bg-[#FF47AF] text-white': openTab === 3 }"
                             class="flex-1 py-2 px-4 rounded-md focus:outline-none focus:shadow-outline-blue transition-all duration-300">10
                             October</button>
-                        <button x-on:click="openTab = 4" :class="{ 'bg-[#39B54A] text-white': openTab === 4 }"
+                        <button x-on:click="openTab = 4" :class="{ 'bg-[#FF47AF] text-white': openTab === 4 }"
                             class="flex-1 py-2 px-4 rounded-md focus:outline-none focus:shadow-outline-blue transition-all duration-300">11
                             October</button>
 

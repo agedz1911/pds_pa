@@ -1,12 +1,13 @@
 <div>
-    <section class="breadcrumbs relative pb-0">
+    {{-- <section class="breadcrumbs relative pb-0">
         <div class="absolute inset-0 bg-gradient-to-t from-[#27AAE1]/80 to-[#39B54A]/10"></div>
         <div class="py-16 lg:py-28 text-center relative">
             <h2 class=" uppercase text-2xl font-bold tracking-wide lg:text-4xl">Welcome Message</h2>
         </div>
-    </section>
+    </section> --}}
 
-    <section class="bg-gradient-to-b from-[#27AAE1]/80 to-[#06D322]/10 relative z-0 py-28">
+    {{-- <section class="bg-gradient-to-b from-[#27AAE1]/80 to-[#06D322]/10 relative z-0 py-28"> --}}
+    <section class="relative z-0 py-28">
         <div class="mb-6 px-4 md:px-24">
             @foreach ($messages as $welcomeMessage)
             @if ($loop->even)

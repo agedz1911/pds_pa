@@ -1,15 +1,17 @@
 <div>
-    <section class="breadcrumbs relative pb-0">
-        <div class="absolute inset-0 bg-gradient-to-t from-[#27AAE1]/80 to-[#39B54A]/10"></div>
+    {{-- <section class="breadcrumbs relative pb-0">
+        <div class="absolute inset-0 bg-gradient-to-t from-[#27AAE1]/80 to-[#FF47AF]/10"></div>
         <div class="py-16 lg:py-28 text-center relative">
-            <h2 class=" uppercase text-2xl font-bold tracking-wide lg:text-4xl">Organizing Committee</h2>
         </div>
-    </section>
+    </section> --}}
+    <h2 class="md:text-4xl text-xl font-semibold uppercase text-center mt-10">Organizing <span
+            class="text-[#FF47AF]">Committee
+        </span></h2>
 
-    <section class="mx-auto w-full pattern px-5 md:px-10 pt-0 pb-10 md:py-20">
+    <section class="mx-auto w-full pattern px-5 md:px-10 py-10 ">
         <div class="bg-competition w-full h-full absolute"></div>
         {{-- @foreach ($uniqueCategories as $category)
-        <h2 class="text-center text-xl lg:text-2xl font-bold mb-5 uppercase text-[#39B54A]">{{$category}}</h2>
+        <h2 class="text-center text-xl lg:text-2xl font-bold mb-5 uppercase text-[#FF47AF]">{{$category}}</h2>
         <div class="flex flex-wrap gap-4 justify-center mb-12">
             @foreach ($committees as $committee)
             @if ($committee->category == $category)
@@ -35,7 +37,7 @@
             @if (count($committees) > 0)
             @foreach ($uniqueCategories as $category)
             <div class="flex flex-col">
-                <h1 class="font-semibold text-[#39B54A] text-xl">{{ $category }}</h1>
+                <h1 class="font-semibold text-[#FF47AF] text-xl">{{ $category }}</h1>
                 <div class="flex flex-col">
                     @foreach ($committees as $committee)
                     @if ($committee->category == $category)

@@ -1,13 +1,16 @@
 <div>
-    <section class="breadcrumbs relative pb-0">
-        <div class="absolute inset-0 bg-gradient-to-t from-[#27AAE1]/80 to-[#39B54A]/10"></div>
+    {{-- <section class="breadcrumbs relative pb-0">
+        <div class="absolute inset-0 bg-gradient-to-t from-[#27AAE1]/80 to-[#FF47AF]/10"></div>
         <div class="py-16 lg:py-28 text-center relative">
             <h2 class=" uppercase text-2xl font-bold tracking-wide lg:text-4xl">scientific schedule</h2>
         </div>
-    </section>
+    </section> --}}
+    <h2 class="md:text-4xl text-xl font-semibold uppercase text-center mt-10">scientific <span
+            class="text-[#FF47AF]">schedule
+        </span></h2>
 
     <div class="px-5 lg:px-10 mt-10">
-        <label class="input input-lg input-success rounded-lg w-full">
+        <label class="input input-lg input-secondary rounded-lg w-full">
             <i class="fa fa-search opacity-45 text-sm"></i>
             <input wire:model.live='search' type="text" class="grow" placeholder="Search Topic, Speaker, Room" />
         </label>
@@ -100,7 +103,7 @@
             <div class="w-full lg:w-3/4 order-2 lg:order-1">
                 @foreach ($uniqDates as $date)
                 <div class="text-center lg:text-start border-t border-dashed pt-2">
-                    <h2 class="text-lg font-semibold uppercase text-[#39B54A] tracking-wider">
+                    <h2 class="text-lg font-semibold uppercase text-[#FF47AF] tracking-wider">
                         {{\Carbon\Carbon::parse($date)->format('l, d F')}}
                     </h2>
                 </div>
@@ -120,15 +123,15 @@
                 <div class="collapse bg-base-100 border border-base-300 my-2">
                     <input type="radio" name="my-accordion-1" />
                     <div class="collapse-title font-semibold">{{$atglance->title_ses}} - <span class="text-xs"><i
-                                class="fa fa-map-marker text-[#39B54A]"></i> {{$atglance->room}} </span></div>
+                                class="fa fa-map-marker text-[#FF47AF]"></i> {{$atglance->room}} </span></div>
                     <div class="collapse-content text-sm">
                         <div class="flex flex-wrap justify-between gap-4 items-start">
                             <div>
                                 <p class="mb-1">
                                     <span class="font-semibold">Session:</span> {{$atglance->title_ses}}
                                 </p>
-                                <p class="mb-2"><i class="fa fa-clock text-[#39B54A]"></i> {{$atglance->time}} | <i
-                                        class="fa fa-map-marker text-[#39B54A]"></i> {{$atglance->room}}</p>
+                                <p class="mb-2"><i class="fa fa-clock text-[#FF47AF]"></i> {{$atglance->time}} | <i
+                                        class="fa fa-map-marker text-[#FF47AF]"></i> {{$atglance->room}}</p>
                             </div>
                             <div>
                                 {{-- {{$atglance->category_sesi}} --}}
