@@ -10,8 +10,7 @@
 
     <section class="bg-base-100 px-5 md:px-10 pt-0 pb-10 md:py-20">
         <div class="text-center lg:text-start mb-5 md:mb-10">
-            <p class="mb-1 text-[#FF47AF]">Submission</p>
-            <h2 class="mb-2 uppercase text-3xl font-semibold">Guideline for <span class="text-[#FF47AF]">Abstract
+            <h2 class="mb-2 uppercase text-3xl font-semibold">Guideline for <span class="text-[#262262]">Abstract
                     Submission</span>
             </h2>
             {{-- <p>Abstract Free Paper</p> --}}
@@ -23,7 +22,7 @@
                         <h2 class="card-title">Online <span class="text-[#FF47AF]">Submission</span></h2>
                         <p class="text-gray-600 italic">*make sure the file complies with the guidelines.</p>
                         <div class="card-actions justify-end mt-5">
-                            <a href="javascript:void(0)" class="btn btn-secondary"><i class="fa-solid fa-upload me-1"></i>
+                            <a href="javascript:void(0)" class="btn hover:bg-[#FF47AF] bg-[#2B3990] text-white"><i class="fa-solid fa-upload me-1"></i>
                                 Submit Abstract</a>
                         </div>
                     </div>

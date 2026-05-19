@@ -103,7 +103,7 @@
             <div class="w-full lg:w-3/4 order-2 lg:order-1">
                 @foreach ($uniqDates as $date)
                 <div class="text-center lg:text-start border-t border-dashed pt-2">
-                    <h2 class="text-lg font-semibold uppercase text-[#FF47AF] tracking-wider">
+                    <h2 class="text-lg font-semibold uppercase text-[#262262] tracking-wider">
                         {{\Carbon\Carbon::parse($date)->format('l, d F')}}
                     </h2>
                 </div>
@@ -123,15 +123,15 @@
                 <div class="collapse bg-base-100 border border-base-300 my-2">
                     <input type="radio" name="my-accordion-1" />
                     <div class="collapse-title font-semibold">{{$atglance->title_ses}} - <span class="text-xs"><i
-                                class="fa fa-map-marker text-[#FF47AF]"></i> {{$atglance->room}} </span></div>
+                                class="fa fa-map-marker text-[#262262]"></i> {{$atglance->room}} </span></div>
                     <div class="collapse-content text-sm">
                         <div class="flex flex-wrap justify-between gap-4 items-start">
                             <div>
                                 <p class="mb-1">
                                     <span class="font-semibold">Session:</span> {{$atglance->title_ses}}
                                 </p>
-                                <p class="mb-2"><i class="fa fa-clock text-[#FF47AF]"></i> {{$atglance->time}} | <i
-                                        class="fa fa-map-marker text-[#FF47AF]"></i> {{$atglance->room}}</p>
+                                <p class="mb-2"><i class="fa fa-clock text-[#262262]"></i> {{$atglance->time}} | <i
+                                        class="fa fa-map-marker text-[#262262]"></i> {{$atglance->room}}</p>
                             </div>
                             <div>
                                 {{-- {{$atglance->category_sesi}} --}}

@@ -7,7 +7,7 @@
             <hr />
             @endif
             <div class="timeline-middle">
-                <i class="fa fa-calendar-check-o text-[#39B54A] text-lg"></i>
+                <i class="fa fa-calendar-check-o text-[#FF47AF] text-lg"></i>
             </div>
             @if($index % 2 === 0)
             <div class="timeline-start mb-10 md:text-end">

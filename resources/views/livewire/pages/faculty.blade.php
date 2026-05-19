@@ -12,7 +12,7 @@
     <section class="mx-auto w-full px-5 md:px-10 pt-0 pb-10 md:py-20">
         <div class="">
             <div class="w-full px-3">
-                <label class="input input-success rounded-xl input-lg w-full">
+                <label class="input input-secondary rounded-xl input-lg w-full">
                     <i class="fa-solid fa-search h-[1em] opacity-50"></i>
                     <input wire:model.live.debounce.500ms="searchTerm" type="text" class="w-full" required
                         placeholder="Search Faculties.." />
@@ -22,13 +22,13 @@
                 <!-- name of each tab group should be unique -->
                 <div class="tabs tabs-border justify-evenly mb-5">
                     <input type="radio" name="my_tabs_2"
-                        class="tab uppercase tracking-wider text-lg hover:text-[#262262] text-[#FF47AF]"
-                        aria-label="Indonesian Faculties" />
+                        class="tab uppercase tracking-wider text-lg text-[#262262]"
+                        aria-label="Indonesian Faculties" checked="checked"/>
                     <div class="tab-content  p-5 rounded-lg">
                         <div class="grid grid-cols-1 md:grid-cols-3 lg:grid-cols-4 gap-5">
                             @foreach ($indofaculties as $indo)
                             <div
-                                class="card bg-emerald-100/10 shadow-sm p-0 hover:shadow-md hover:scale-105 transition-all duration-200">
+                                class="card  shadow-sm p-0 hover:shadow-md hover:scale-105 transition-all duration-200">
                                 <figure onclick="my_modal_{{$loop->index}}.showModal()"
                                     class="relative hover:cursor-pointer ">
                                     <img src="{{$indo->image ? asset('storage/' . $indo->image) : "
@@ -37,7 +37,7 @@
                                 </figure>
                                 <div class="card-body text-center">
                                     <h2 onclick="my_modal_{{$loop->index}}.showModal()"
-                                        class="text-xl font-semibold text-[#FF47AF] hover:text-[#262262] hover:cursor-pointer">
+                                        class="text-xl font-semibold text-[#262262] hover:text-[#FF47AF] hover:cursor-pointer">
                                         {{$indo->name}}
                                     </h2>
                                     <p>{{$indo->description}}</p>
@@ -57,7 +57,7 @@
                                             assets/images/speaker.png"}}" alt="Photo">
                                         <div>
                                             <p class="mb-0"><span
-                                                    class="text-[#FF47AF] text-lg font-semibold">{{$indo->name}}</span>
+                                                    class="text-[#262262] text-lg font-semibold">{{$indo->name}}</span>
                                                 <br>
                                                 {{$indo->country}}
                                             </p>
@@ -97,14 +97,14 @@
                     </div>
 
                     <input type="radio" name="my_tabs_2"
-                        class="tab uppercase tracking-wider  text-lg hover:text-[#262262] text-[#FF47AF]"
-                        aria-label="International faculties" checked="checked" />
+                        class="tab uppercase tracking-wider  text-lg text-[#262262]"
+                        aria-label="International faculties"  />
                     <div class="tab-content  p-5 rounded-lg">
                         {{-- @dd($indofaculties) --}}
                         <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-5">
                             @foreach ($foreignfaculties as $foreign)
                             <div
-                                class="card bg-emerald-100/10 shadow-sm p-0 hover:shadow-md hover:scale-105 transition-all duration-200">
+                                class="card  shadow-sm p-0 hover:shadow-md hover:scale-105 transition-all duration-200">
                                 <figure onclick="my_modal_f{{$loop->index}}.showModal()"
                                     class="relative hover:cursor-pointer ">
                                     <img src="{{$foreign->image ? asset('storage/' . $foreign->image) : "
@@ -114,11 +114,11 @@
                                 </figure>
                                 <div class="card-body text-center">
                                     <h2 onclick="my_modal_f{{$loop->index}}.showModal()"
-                                        class="text-xl font-semibold text-[#FF47AF] hover:cursor-pointer hover:text-[#262262]">
+                                        class="text-xl font-semibold text-[#262262] hover:cursor-pointer hover:text-[#FF47AF]">
                                         {{$foreign->name}}
                                     </h2>
                                     <div class="flex justify-center">
-                                        <div class="badge badge-info badge-soft badge-sm">
+                                        <div class="badge badge-secondary badge-soft badge-sm">
                                             <p class="text-sm">{{$foreign->country == 'South Korea' ? 'Republic of
                                                 Korea' : $foreign->country}}</p>
                                         </div>
@@ -141,7 +141,7 @@
                                             assets/images/speaker.png"}}" alt="{{$foreign->name}}">
                                         <div>
                                             <p class="mb-0"><span
-                                                    class="text-[#FF47AF] text-lg font-semibold">{{$foreign->name}}</span>
+                                                    class="text-[#262262] text-lg font-semibold">{{$foreign->name}}</span>
                                                 <br>
                                                 {{$foreign->country}}
                                             </p>

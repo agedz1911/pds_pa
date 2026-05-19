@@ -117,7 +117,7 @@
         </div>
     </section>
 
-    <section class="bg-gradient-to-b from-[#262262] to-[#27AAE1] relative z-0 py-28">
+    <section  class="bg-gradient-to-b from-[#262262] to-[#27AAE1] relative z-0 py-28">
         {{-- <div class="absolute inset-0 feature start-0"></div> --}}
         <div class="relative">
             <div class="w-full max-w-6xl mx-auto border-b mb-10 pb-10 border-white border-opacity-35">
@@ -134,7 +134,7 @@
                         <div class="w-full border-e border-opacity-35 border-white">
                             <div class="border-b border-opacity-25 border-white md:border-b-0 text-center py-5 px-2">
                                 <h1 class="text-white m-0 text-4xl md:text-5xl font-semibold"><span class="num"
-                                        data-val="25"></span><span>+</span>
+                                        data-val="20"></span><span>+</span>
                                 </h1>
                                 <p class="text-xs text-white">Symposium</p>
                             </div>
@@ -142,9 +142,9 @@
                         <div class="w-full border-e border-opacity-35 border-white">
                             <div class="border-b border-opacity-25 border-white md:border-b-0 text-center py-5 px-2">
                                 <h1 class="text-white m-0 text-4xl md:text-5xl font-semibold"><span class="num"
-                                        data-val="16"></span><span>+</span>
+                                        data-val="15"></span><span>+</span>
                                 </h1>
-                                <p class="text-xs text-white">Workshops </p>
+                                <p class="text-xs text-white">Lecture </p>
                             </div>
                         </div>
                         <div class="w-full border-e border-opacity-35 border-white">
@@ -158,57 +158,35 @@
                     </div>
                 </div>
             </div>
-            <div class="">
+            <div id="welcome-message" class="">
                 <h2 class="text-4xl text-white font-semibold uppercase text-center mt-10">Welcome <span
-                        class="text-[#FF47AF]">message
+                        class="text-[#FF47AF]">Note
                     </span></h2>
                 <livewire:pages.welcome-message />
-                {{-- <div class="flex flex-col md:flex-row justify-center">
-                    @foreach ($welcomeMessages as $welcomeMessage)
-                    <div class="mb-5 w-full max-w-3xl items-start px-2 lg:px-8">
-                        <div class="pb-4 text-justify text-white">
-                            {!! Str::limit(str($welcomeMessage->description)->markdown()->sanitizeHtml(), 450) !!} <br>
-                            <a class="text-pink-200 hover:text-white hover:underline" href="/welcome-message">Read
-                                More...</a>
-                        </div>
-                        <div>
-                            <div class="avatar">
-                                <img src="{{$welcomeMessage->image ? asset('storage/' . $welcomeMessage->image) : "
-                                    assets/images/speaker.png"}}" alt="{{$welcomeMessage->name}}"
-                                    class="w-full max-w-52 shadow-md rounded-lg ">
-                            </div>
-                        </div>
-                        <div class="p-4 rounded-xl bg-[#FF47AF] w-full max-w-sm mt-3 mb-5">
-                            <div class="p-2 border-s border-white border-spacing-7">
-                                <p class="text-white text-xs italic"> {{$welcomeMessage->title}}
-                                </p>
-                                <h6 class="font-semibold text-white">{{$welcomeMessage->name}}</h6>
-                            </div>
-                        </div>
-                    </div>
-                    @endforeach
-                </div> --}}
+                
             </div>
         </div>
     </section>
 
-    <section class="w-full pt-24 pb-3 px-2 lg:px-4">
-        <livewire:pages.committee />
+    <section id="organizing-committee" class="w-full py-24 px-2 lg:px-4 pattern">
+        <div class="bg-competition w-full h-full absolute"></div>
+            <livewire:pages.committee />
+        </div>
     </section>
 
-    <section class="w-full pt-24 pb-3 px-2 lg:px-4">
+    <section id="faculties" class="w-full py-24 px-2 lg:px-4 bg-slate-50">
         <livewire:pages.faculty />
     </section>
-    <section class="w-full pt-24 pb-3 px-2 lg:px-4">
+    <section id="program-at-glance" class="w-full pt-24 pb-3 px-2 lg:px-4">
         <livewire:pages.at-glance />
     </section>
-    <section class="w-full pt-24 pb-3 px-2 lg:px-4">
+    <section id="scientific-schedule" class="w-full py-24 px-2 lg:px-4 bg-slate-50">
         <livewire:pages.schedule />
     </section>
-    <section class="w-full pt-24 pb-3 px-2 lg:px-4">
+    <section id="registration" class="w-full py-24 px-2 lg:px-4">
         <livewire:pages.registration />
     </section>
-    <section class="w-full pt-24 pb-3 px-2 lg:px-4">
+    <section id="abstract-submission" class="w-full py-24 px-2 lg:px-4 bg-slate-50">
         <livewire:pages.guideline-abstract />
     </section>
 

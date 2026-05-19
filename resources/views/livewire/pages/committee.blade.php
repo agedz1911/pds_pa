@@ -4,12 +4,12 @@
         <div class="py-16 lg:py-28 text-center relative">
         </div>
     </section> --}}
-    <h2 class="md:text-4xl text-xl font-semibold uppercase text-center mt-10">Organizing <span
+    <h2 class="md:text-4xl text-xl font-semibold uppercase text-center">Organizing <span
             class="text-[#FF47AF]">Committee
         </span></h2>
 
-    <section class="mx-auto w-full pattern px-5 md:px-10 py-10 ">
-        <div class="bg-competition w-full h-full absolute"></div>
+    <section class="mx-auto w-full  px-5 md:px-10 py-10 ">
+        
         {{-- @foreach ($uniqueCategories as $category)
         <h2 class="text-center text-xl lg:text-2xl font-bold mb-5 uppercase text-[#FF47AF]">{{$category}}</h2>
         <div class="flex flex-wrap gap-4 justify-center mb-12">
@@ -33,11 +33,11 @@
             @endforeach
         </div>
         @endforeach --}}
-        <div class="grid grid-cols-1 gap-3 relative">
-            @if (count($committees) > 0)
+        <div class="grid grid-cols-1 lg:grid-cols-2 gap-3 relative">
+            @if (count($committees) > 0)    
             @foreach ($uniqueCategories as $category)
             <div class="flex flex-col">
-                <h1 class="font-semibold text-[#FF47AF] text-xl">{{ $category }}</h1>
+                <h1 class="font-semibold text-[#262262] text-xl">{{ $category }}</h1>
                 <div class="flex flex-col">
                     @foreach ($committees as $committee)
                     @if ($committee->category == $category)
@@ -60,4 +60,6 @@
             </div>
             @endif
     </section>
+
+    
 </div>

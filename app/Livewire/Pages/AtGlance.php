@@ -14,10 +14,8 @@ class AtGlance extends Component
 {
     public $atglances;
 
+    public $tujuh;
     public $delapan;
-    public $sembilan;
-    public $sepuluh;
-    public $sebelas;
 
     public $search = '';
 
@@ -47,10 +45,8 @@ class AtGlance extends Component
 
         $this->atglances = $query->get();
 
-        $this->delapan = $this->atglances->where('date', '2026-10-08')->sortBy('no_urut');
-        $this->sembilan = $this->atglances->where('date', '2026-10-09')->sortBy('no_urut');
-        $this->sepuluh = $this->atglances->where('date', '2026-10-10')->sortBy('no_urut');
-        $this->sebelas = $this->atglances->where('date', '2026-10-11')->sortBy('no_urut');
+        $this->delapan = $this->atglances->where('date', '2026-11-08')->sortBy('no_urut');
+        $this->tujuh = $this->atglances->where('date', '2026-11-07')->sortBy('no_urut');
     }
 
     public function render()
