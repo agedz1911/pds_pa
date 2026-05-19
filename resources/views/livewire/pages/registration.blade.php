@@ -5,365 +5,90 @@
             <h2 class=" uppercase text-2xl font-bold tracking-wide lg:text-4xl">Registration</h2>
         </div>
     </section> --}}
-    <h2 class="md:text-4xl text-xl font-semibold uppercase text-center mt-10"> <span
-            class="text-[#FF47AF]">Registration
+    <h2 class="md:text-4xl text-xl font-semibold uppercase text-center mt-10"> <span class="text-[#FF47AF]">Registration
         </span></h2>
 
     <section class="px-5 md:px-10 pt-0 pb-10 md:py-20 bg-competition">
-        <div class="tabs tabs-border justify-evenly">
-            <input type="radio" name="my_tabs_2" class="tab text-lg uppercase text-[#FF47AF]"
-                aria-label="Indonesian Participant" checked="checked" />
-            <div class="tab-content">
-                <div class="pb-6 text-gray-500">
-                    @foreach ($uniqueLocals as $category)
-                    @if ($category == 'symposium')
-                    <h2 class="uppercase font-semibold text-[#FF47AF] mb-2 mt-5">{{$category}}</h2>
-                    <div class="relative overflow-x-auto shadow sm:rounded-lg ">
-                        <table class="w-full text-sm text-left rtl:text-right text-gray-500 ">
-                            <thead class=" text-white uppercase text-center bg-[#262262] ">
-                                <tr>
-                                    <th scope="col" class="px-6 py-3">
-                                        Category
-                                    </th>
-                                    <th scope="col" class="px-6 py-3">
-                                        Early Bird Registration <br>
-                                        up to 30 June 2026
-                                    </th>
-                                    <th scope="col" class="px-6 py-3">
-                                        Regular Registration <br>
-                                        up to 28 August 2026
-                                    </th>
-                                    <th scope="col" class="px-6 py-3">
-                                        Late/Onsite Registration <br>
-                                        Start from 29 August 2026
-                                    </th>
-
-                                </tr>
-                            </thead>
-                            <tbody>
-                                @foreach ($regLocals as $regLocal)
-                                @if ($regLocal->category_reg == $category)
-                                <tr class="bg-white border-b  border-gray-200 hover:bg-fuchsia-50 ">
-                                    <th scope="row" class="px-6 py-4 font-medium text-gray-900 whitespace-nowrap">
-                                        {{$regLocal->title}}
-                                    </th>
-                                    <td class="px-6 py-4 text-center">
-                                        IDR {{$regLocal->early_bird_reg != 0 ? number_format($regLocal->early_bird_reg,
-                                        0, ',', '.') : 'to be announce'}}
-                                    </td>
-                                    <td class="px-6 py-4 text-center">
-                                        IDR {{$regLocal->normal_reg != 0 ? number_format($regLocal->normal_reg, 0, ',',
-                                        '.') : 'to be announce'}}
-                                    </td>
-                                    <td class="px-6 py-4 text-center">
-                                        IDR {{$regLocal->onsite_reg != 0 ? number_format($regLocal->onsite_reg, 0, ',',
-                                        '.'): 'to be announce'}}
-                                    </td>
-                                </tr>
-                                @endif
-                                @endforeach
-                            </tbody>
-                        </table>
-                        <div class="relative mt-2">
-                            <a href="javascript:void(0)"
-                                class="btn bg-[#FF47AF] text-white hover:bg-[#288b35] btn-lg rounded-xl mb-3 float-end text-sm"><i
-                                    class="fa-solid fa-list mx-3"></i>Register Now!</a>
-                        </div>
-                    </div>
-                    @elseif ($category == 'workshop')
-                    <h2 class="uppercase font-semibold text-[#FF47AF] mb-2 mt-5">{{$category}}</h2>
-                    <div class="grid lg:grid-cols-3 md:grid-cols-2 grid-cols-1 gap-4">
-                        @foreach ($regLocals as $regLocal)
-                        @if ($regLocal->category_reg == $category)
-                        <div class="card w-full lg:w-96 bg-base-100 shadow-sm">
-                            <div class="card-body">
-                                <span class="badge badge-xs badge-warning">{{$regLocal->title}}</span>
-                                <div class="flex flex-wrap justify-between">
-                                    <h2 class="text-xl font-bold">{{$regLocal->subtitle}}</h2>
-                                    <span class="text-xl">IDR {{$regLocal->early_bird_reg != 0 ? number_format($regLocal->early_bird_reg,
-                                        0, ',', '.') : 'to be announce'}}</span>
-                                </div>
-                                {!! str($regLocal->description)->markdown()->sanitizeHtml() !!}
-                                <div class="mt-6">
-                                    <a href="javascript:void(0)"
-                                        class="btn bg-[#FF47AF] text-white hover:bg-[#FF47AF]  rounded-xl mb-3 btn-block"><i
-                                            class="fa-solid fa-list mx-3"></i>Register Now!</a>
-                                </div>
-                            </div>
-                        </div>
-                        @endif
-                        @endforeach
-                    </div>
-                    @else
-                    <h2 class="uppercase font-semibold text-[#FF47AF] mb-2 mt-5">{{$category}}</h2>
-                    <div class="relative overflow-x-auto shadow sm:rounded-lg ">
-                        <table class="w-full text-sm text-left rtl:text-right text-gray-500 ">
-                            <thead class=" text-white uppercase text-center bg-[#262262] ">
-                                <tr>
-                                    <th scope="col" class="px-6 py-3">
-                                        Category
-                                    </th>
-                                    <th scope="col" class="px-6 py-3">
-                                        for General Practitioner and Primary Care Providers <br>
-                                        1 August 2026
-                                        Swissôtel Jakarta PIK Avenue, Jakarta
-                                    </th>
-                                    <th scope="col" class="px-6 py-3">
-                                        Nurse / Medical Students
-                                    </th>
-
-                                </tr>
-                            </thead>
-                            <tbody>
-                                @foreach ($regLocals as $regLocal)
-                                @if ($regLocal->category_reg == $category)
-                                <tr class="bg-white border-b  border-gray-200 hover:bg-fuchsia-50 ">
-                                    <th scope="row" class="px-6 py-4 font-medium text-gray-900 whitespace-nowrap">
-                                        {{$regLocal->title}}
-                                    </th>
-                                    <td class="px-6 py-4 text-center">
-                                        {{$regLocal->early_bird_reg != 0 ? 'IDR ' .
-                                        number_format($regLocal->early_bird_reg,
-                                        0, ',', '.') : 'to be announce'}}
-                                    </td>
-                                    <td class="px-6 py-4 text-center">
-                                        {{$regLocal->normal_reg != 0 ? 'IDR' . number_format($regLocal->normal_reg, 0,
-                                        ',',
-                                        '.') : ''}}
-                                    </td>
-
-                                </tr>
-                                @endif
-                                @endforeach
-                            </tbody>
-                        </table>
-                        <div class="relative mt-2">
-                            <a href="javascript:void(0)"
-                                class="btn bg-[#FF47AF] text-white hover:bg-[#FF47AF] btn-lg rounded-xl mb-3 float-end text-sm"><i
-                                    class="fa-solid fa-list mx-3"></i>Register Now!</a>
-                        </div>
-                    </div>
-                    @endif
-                    @endforeach
-
-                </div>
-            </div>
-
-            <input type="radio" name="my_tabs_2" class="tab uppercase text-lg text-[#FF47AF] "
-                aria-label="Foreign Participant" />
-            <div class="tab-content">
-                <div class="pb-6 text-gray-500">
-                    @foreach ($uniqueForeigns as $category)
-                    @if ($category == 'symposium')
-                    <h2 class="uppercase font-semibold text-[#FF47AF] mb-2 mt-5">{{$category}}</h2>
-                    <div class="relative overflow-x-auto shadow sm:rounded-lg ">
-                        <table class="w-full text-sm text-left rtl:text-right text-gray-500 ">
-                            <thead class=" text-white uppercase text-center bg-[#262262] ">
-                                <tr>
-                                    <th scope="col" class="px-6 py-3">
-                                        Category
-                                    </th>
-                                    <th scope="col" class="px-6 py-3">
-                                        Early Bird Registration <br>
-                                        up to 30 June 2026
-                                    </th>
-                                    <th scope="col" class="px-6 py-3">
-                                        Regular Registration <br>
-                                        up to 28 August 2026
-                                    </th>
-                                    <th scope="col" class="px-6 py-3">
-                                        Late/Onsite Registration <br>
-                                        Start from 29 August 2026
-                                    </th>
-
-                                </tr>
-                            </thead>
-                            <tbody>
-                                @foreach ($regForeigns as $regForeign)
-                                @if ($regForeign->category_reg == $category)
-                                <tr class="bg-white border-b  border-gray-200 hover:bg-fuchsia-50 ">
-                                    <th scope="row" class="px-6 py-4 font-medium text-gray-900 whitespace-nowrap">
-                                        {{$regForeign->title}}
-                                    </th>
-                                    <td class="px-6 py-4 text-center">
-                                        USD {{$regForeign->early_bird_reg != 0 ?
-                                        number_format($regForeign->early_bird_reg,
-                                        0, ',', '.') : 'to be announce'}}
-                                    </td>
-                                    <td class="px-6 py-4 text-center">
-                                        USD {{$regForeign->normal_reg != 0 ? number_format($regForeign->normal_reg, 0,
-                                        ',',
-                                        '.') : 'to be announce'}}
-                                    </td>
-                                    <td class="px-6 py-4 text-center">
-                                        USD {{$regForeign->onsite_reg != 0 ? number_format($regForeign->onsite_reg, 0,
-                                        ',',
-                                        '.'): 'to be announce'}}
-                                    </td>
-                                </tr>
-                                @endif
-                                @endforeach
-                            </tbody>
-                        </table>
-                        <div class="relative mt-2">
-                            <a href="javascript:void(0)"
-                                class="btn bg-[#FF47AF] text-white hover:bg-[#278032] btn-lg rounded-xl mb-3 float-end text-sm"><i
-                                    class="fa-solid fa-list mx-3"></i>Register Now!</a>
-                        </div>
-                    </div>
-                    @elseif ($category == 'workshop')
-                    <h2 class="uppercase font-semibold text-[#FF47AF] mb-2 mt-5">{{$category}}</h2>
-                    <div class="relative overflow-x-auto shadow sm:rounded-lg ">
-                        <table class="w-full text-sm text-left rtl:text-right text-gray-500 ">
-                            <thead class=" text-white uppercase text-center bg-[#262262] ">
-                                <tr>
-                                    <th scope="col" class="px-6 py-3">
-                                        Category
-                                    </th>
-                                    <th scope="col" class="px-6 py-3">
-                                        28, 29 & 30 July, 2026 <br>
-                                        Fatmawati Hospital, Jakarta
-                                    </th>
-                                    <th scope="col" class="px-6 py-3">
-                                        Regular Registration <br>
-                                        up to 28 August 2026
-                                    </th>
-                                </tr>
-                            </thead>
-                            <tbody>
-                                @foreach ($regForeigns as $regForeign)
-                                @if ($regForeign->category_reg == $category)
-                                <tr class="bg-white border-b  border-gray-200 hover:bg-fuchsia-50 ">
-                                    <th scope="row" class="px-6 py-4 font-medium text-gray-900 whitespace-nowrap">
-                                        {{$regForeign->title}}
-                                    </th>
-                                    <td class="px-6 py-4 text-center">
-                                        {{$regForeign->early_bird_reg != 0 ? 'USD ' .
-                                        number_format($regForeign->early_bird_reg, 0, ',', '.') : 'to be announce'}}
-
-                                    </td>
-                                    <td class="px-6 py-4 text-center">
-                                        {{$regForeign->early_bird_reg != 0 ? 'USD ' .
-                                        number_format($regForeign->normal_reg, 0, ',', '.') : ''}}
-                                    </td>
-
-                                </tr>
-                                @endif
-                                @endforeach
-                            </tbody>
-                        </table>
-                        <div class="relative mt-2">
-                            <a href="javascript:void(0)"
-                                class="btn bg-[#FF47AF] text-white hover:bg-[#FF47AF] btn-lg rounded-xl mb-3 float-end text-sm"><i
-                                    class="fa-solid fa-list mx-3"></i>Register Now!</a>
-                        </div>
-                    </div>
-                    @elseif ($category == 'workshop microsurgery')
-                    <h2 class="uppercase font-semibold text-[#FF47AF] mb-2 mt-5">{{$category}}</h2>
-                    <div class="relative overflow-x-auto shadow sm:rounded-lg ">
-                        <table class="w-full text-sm text-left rtl:text-right text-gray-500 ">
-                            <thead class=" text-white uppercase text-center bg-[#262262] ">
-                                <tr>
-                                    <th scope="col" class="px-6 py-3">
-                                        Category
-                                    </th>
-                                    <th scope="col" class="px-6 py-3">
-                                        30 July, 2026 <br>
-                                        Zeiss Office
-                                    </th>
-                                    <th scope="col" class="px-6 py-3">
-                                        Regular Registration <br>
-                                        up to 28 August 2026
-                                    </th>
-                                </tr>
-                            </thead>
-                            <tbody>
-                                @foreach ($regForeigns as $regForeign)
-                                @if ($regForeign->category_reg == $category)
-                                <tr class="bg-white border-b  border-gray-200 hover:bg-fuchsia-50 ">
-                                    <th scope="row" class="px-6 py-4 font-medium text-gray-900 whitespace-nowrap">
-                                        {{$regForeign->title}}
-                                    </th>
-                                    <td class="px-6 py-4 text-center">
-                                        {{$regForeign->early_bird_reg != 0 ? 'USD ' .
-                                        number_format($regForeign->early_bird_reg, 0, ',', '.') : 'to be announce'}}
-
-                                    </td>
-                                    <td class="px-6 py-4 text-center">
-                                        {{$regForeign->early_bird_reg != 0 ? 'USD ' .
-                                        number_format($regForeign->normal_reg, 0, ',', '.') : ''}}
-                                    </td>
-
-                                </tr>
-                                @endif
-                                @endforeach
-                            </tbody>
-                        </table>
-                        <div class="relative mt-2">
-                            <a href="javascript:void(0)"
-                                class="btn bg-[#FF47AF] text-white hover:bg-[#FF47AF] btn-lg rounded-xl mb-3 float-end text-sm"><i
-                                    class="fa-solid fa-list mx-3"></i>Register Now!</a>
-                        </div>
-                    </div>
-                    @else
-                    <h2 class="uppercase font-semibold text-[#FF47AF] mb-2 mt-5">{{$category}}</h2>
-                    <div class="relative overflow-x-auto shadow sm:rounded-lg ">
-                        <table class="w-full text-sm text-left rtl:text-right text-gray-500 ">
-                            <thead class=" text-white uppercase text-center bg-[#262262] ">
-                                <tr>
-                                    <th scope="col" class="px-6 py-3">
-                                        Category
-                                    </th>
-                                    <th scope="col" class="px-6 py-3">
-                                        for General Practitioner and Primary Care Providers <br>
-                                        1 August 2026
-                                        Swissôtel Jakarta PIK Avenue, Jakarta
-                                    </th>
-                                    <th scope="col" class="px-6 py-3">
-                                        Nurse / Medical Students
-                                    </th>
-
-                                </tr>
-                            </thead>
-                            <tbody>
-                                @foreach ($regForeigns as $regForeign)
-                                @if ($regForeign->category_reg == $category)
-                                <tr class="bg-white border-b  border-gray-200 hover:bg-fuchsia-50 ">
-                                    <th scope="row" class="px-6 py-4 font-medium text-gray-900 whitespace-nowrap">
-                                        {{$regForeign->title}}
-                                    </th>
-                                    <td class="px-6 py-4 text-center">
-                                        {{$regForeign->early_bird_reg != 0 ? 'USD ' .
-                                        number_format($regForeign->early_bird_reg,
-                                        0, ',', '.') : 'to be announce'}}
-                                    </td>
-                                    <td class="px-6 py-4 text-center">
-                                        {{$regForeign->normal_reg != 0 ? 'USD' . number_format($regForeign->normal_reg, 0,
-                                        ',',
-                                        '.') : ''}}
-                                    </td>
-
-                                </tr>
-                                @endif
-                                @endforeach
-                            </tbody>
-                        </table>
-                        <div class="relative mt-2">
-                            <a href="javascript:void(0)"
-                                class="btn bg-[#FF47AF] text-white hover:bg-[#FF47AF] btn-lg rounded-xl mb-3 float-end text-sm"><i
-                                    class="fa-solid fa-list mx-3"></i>Register Now!</a>
-                        </div>
-                    </div>
-                    @endif
-                    @endforeach
-
-                </div>
-
-            </div>
+        <div class="mb-5">
+            <h1 class="font-bold md:text-2xl text-xl uppercase text-[#262262]"><i class="fa fa-angles-right text-lg"></i> Indonesian Participant</h1>
         </div>
+        <div class="flex flex-wrap justify-evenly gap-2 mb-10">
+            @foreach ($regLocals as $item)
+            <div class="card w-full max-w-sm bg-base-100 shadow-sm">
+                <div class="card-body">
+                    @if (now()->lte(\Carbon\Carbon::create(2026, 8, 31)))
+                    <span class="badge badge-sm border-none badge-secondary">Early Bird Registration</span>
+                    @elseif (now()->lte(\Carbon\Carbon::create(2026, 11, 6)))
+                    <span class="badge badge-xs badge-secondary">Regular Registration</span>
+                    @else
+                    <span class="badge badge-xs badge-secondary">Late / Onsite Registration</span>
+                    @endif
+
+                    <div class="flex justify-between">
+                        <h2 class="md:text-2xl text-xl font-bold">{{$item->title}}</h2>
+                        @if (now()->lte(\Carbon\Carbon::create(2026, 8, 31)))
+                        <span class="text-xl">IDR {{number_format($item->early_bird_reg,
+                            0, ',', '.')}}</span>
+                        @elseif (now()->lte(\Carbon\Carbon::create(2026, 11, 6)))
+                        <span class="text-xl">IDR {{$item->normal_reg}}</span>
+                        @else
+                        <span class="text-xl">IDR {{$item->onsite_reg}}</span>
+                        @endif
+                    </div>
+                    <div>
+                        {!! str($item->description)->markdown()->sanitizeHtml() !!}
+                    </div>
+                    <div class="mt-6">
+                        <button
+                            class="btn hover:bg-[#FF47AF] bg-[#2B3990] btn-block uppercase tracking-widest text-white rounded-lg"><i
+                                class="fa fa-edit text-xs"></i> Register</button>
+                    </div>
+                </div>
+            </div>
+            @endforeach
+        </div>
+        <div class="mb-5">
+            <h1 class="font-bold md:text-2xl text-xl text-[#262262] uppercase"><i class="fa fa-angles-right text-lg"></i> International Participant</h1>
+        </div>
+        <div class="flex flex-wrap justify-evenly gap-2">
+            @foreach ($regForeigns as $foreign)
+            <div class="card w-full max-w-sm bg-base-100 shadow-sm">
+                <div class="card-body">
+                    @if (now()->lte(\Carbon\Carbon::create(2026, 8, 31)))
+                    <span class="badge badge-sm border-none badge-secondary">Early Bird Registration</span>
+                    @elseif (now()->lte(\Carbon\Carbon::create(2026, 11, 6)))
+                    <span class="badge badge-xs badge-secondary">Regular Registration</span>
+                    @else
+                    <span class="badge badge-xs badge-secondary">Late / Onsite Registration</span>
+                    @endif
+
+                    <div class="flex justify-between">
+                        <h2 class="md:text-2xl text-xl font-bold">{{$foreign->title}}</h2>
+                        @if (now()->lte(\Carbon\Carbon::create(2026, 8, 31)))
+                        <span class="text-xl">USD {{number_format($foreign->early_bird_reg,
+                            0, ',', '.')}}</span>
+                        @elseif (now()->lte(\Carbon\Carbon::create(2026, 11, 6)))
+                        <span class="text-xl">USD {{$foreign->normal_reg}}</span>
+                        @else
+                        <span class="text-xl">USD {{$foreign->onsite_reg}}</span>
+                        @endif
+                    </div>
+                    <div>
+                        {!! str($foreign->description)->markdown()->sanitizeHtml() !!}
+                    </div>
+                    <div class="mt-6">
+                        <button
+                            class="btn hover:bg-[#FF47AF] bg-[#2B3990] btn-block uppercase tracking-widest text-white rounded-lg"><i
+                                class="fa fa-edit text-xs"></i> Register</button>
+                    </div>
+                </div>
+            </div>
+            @endforeach
+        </div>
+
     </section>
 
-    <section class="px-5 md:px-10 py-10 md:py-20 bg-competition border-t border-dashed border-gray-400">
+    <section class="px-5 md:px-10 py-10 md:py-20  border-t border-dashed border-gray-400">
         <div class=" mt-10">
             <div class="text-center lg:text-start">
                 <h2 class="mb-2 uppercase text-3xl font-semibold">Registration

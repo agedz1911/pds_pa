@@ -12,7 +12,7 @@
             @if($index % 2 === 0)
             <div class="timeline-start mb-10 md:text-end">
                 <time class="font-mono italic">{{ $date->title }}</time>
-                <div class="text-lg font-black">{{
+                <div class="text-lg font-semibold text-[#262262]">{{
                     $date->date_end
                     ? \Carbon\Carbon::parse($date->date)->format('F, jS') . ' - ' .
                     \Carbon\Carbon::parse($date->date_end)->format('F jS, Y')
@@ -22,7 +22,7 @@
             @else
             <div class="timeline-end md:mb-10">
                 <time class="font-mono italic">{{ $date->title }}</time>
-                <div class="text-lg font-black">{{
+                <div class="text-lg font-semibold text-[#262262]">{{
                     $date->date_end
                     ? \Carbon\Carbon::parse($date->date)->format('F, jS') . ' - ' .
                     \Carbon\Carbon::parse($date->date_end)->format('F jS, Y')

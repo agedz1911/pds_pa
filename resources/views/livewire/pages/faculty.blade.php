@@ -23,7 +23,7 @@
                 <div class="tabs tabs-border justify-evenly mb-5">
                     <input type="radio" name="my_tabs_2"
                         class="tab uppercase tracking-wider text-lg text-[#262262]"
-                        aria-label="Indonesian Faculties" checked="checked"/>
+                        aria-label="Indonesian Faculties" />
                     <div class="tab-content  p-5 rounded-lg">
                         <div class="grid grid-cols-1 md:grid-cols-3 lg:grid-cols-4 gap-5">
                             @foreach ($indofaculties as $indo)
@@ -98,7 +98,7 @@
 
                     <input type="radio" name="my_tabs_2"
                         class="tab uppercase tracking-wider  text-lg text-[#262262]"
-                        aria-label="International faculties"  />
+                        aria-label="International faculties" checked="checked"/>
                     <div class="tab-content  p-5 rounded-lg">
                         {{-- @dd($indofaculties) --}}
                         <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-5">
@@ -124,7 +124,7 @@
                                         </div>
                                     </div>
                                     @if ($foreign->description != null)
-                                    <p class="text-xs italic text-end text-gray-500">{{$foreign->description}}</p>
+                                    <p class="text-xs italic text-start text-gray-500">{{$foreign->description}}</p>
                                     @endif
                                 </div>
                             </div>

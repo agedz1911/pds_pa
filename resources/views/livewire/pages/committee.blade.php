@@ -9,7 +9,7 @@
         </span></h2>
 
     <section class="mx-auto w-full  px-5 md:px-10 py-10 ">
-        
+
         {{-- @foreach ($uniqueCategories as $category)
         <h2 class="text-center text-xl lg:text-2xl font-bold mb-5 uppercase text-[#FF47AF]">{{$category}}</h2>
         <div class="flex flex-wrap gap-4 justify-center mb-12">
@@ -34,7 +34,7 @@
         </div>
         @endforeach --}}
         <div class="grid grid-cols-1 lg:grid-cols-2 gap-3 relative">
-            @if (count($committees) > 0)    
+            @if (count($committees) > 0)
             @foreach ($uniqueCategories as $category)
             <div class="flex flex-col">
                 <h1 class="font-semibold text-[#262262] text-xl">{{ $category }}</h1>
@@ -59,7 +59,8 @@
                 <p class="text-gray-500 text-2xl text-center font-semibold">No Data</p>
             </div>
             @endif
+        </div>
     </section>
 
-    
+
 </div>

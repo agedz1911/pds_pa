@@ -50,19 +50,17 @@
                             </a>
                         </li>
 
-                        
+
                     </ul>
                 </div>
             </div>
             <div class="pb-10 mt-4">
                 <ul class="p-0 m-0 flex flex-row flex-wrap gap-4 lg:gap-6 justify-center">
-                    <li class="text-sm font-normal hover:text-[#b9608d] hover:underline"><a href="{{route('organizing-committee')}}">Committee</a></li>
-                    <li class="text-sm font-normal hover:text-[#b9608d] hover:underline"><a href="{{route('faculties')}}">Faculties</a></li>
-                    <li class="text-sm font-normal hover:text-[#b9608d] hover:underline"><a href="{{route('program-at-glance')}}">Schedule</a></li>
-                    <li class="text-sm font-normal hover:text-[#b9608d] hover:underline"><a href="{{route('registration')}}">Registration</a></li>
-                    <li class="text-sm font-normal hover:text-[#b9608d] hover:underline"><a href="{{route('submission')}}">Submission</a></li>
-                    <li class="text-sm font-normal hover:text-[#b9608d] hover:underline"><a href="{{route('visiting')}}">Venue</a>
-                    </li>
+                    <li class="text-sm font-normal hover:text-[#b9608d] hover:underline"><a href="#organizing-committee">Committee</a></li>
+                    <li class="text-sm font-normal hover:text-[#b9608d] hover:underline"><a href="#faculties">Faculties</a></li>
+                    <li class="text-sm font-normal hover:text-[#b9608d] hover:underline"><a href="#program-at-glance">Schedule</a></li>
+                    <li class="text-sm font-normal hover:text-[#b9608d] hover:underline"><a href="#registration">Registration</a></li>
+                    <li class="text-sm font-normal hover:text-[#b9608d] hover:underline"><a href="#abstract-submission">Submission</a></li>
                 </ul>
             </div>
         </div>

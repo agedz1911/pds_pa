@@ -106,7 +106,8 @@
         <div class=" px-3 lg:px-8">
             <div class="w-full">
                 <div class="text-center pb-6 m-auto">
-                    <h2 class="mb-5 md:mb-8 text-3xl text-[#262262] font-bold uppercase">important <span class="">Dates</span></h2>
+                    <h2 class="mb-5 md:mb-8 text-3xl text-[#262262] font-bold uppercase">important <span
+                            class="">Dates</span></h2>
                 </div>
                 <livewire:section.important-date />
             </div>
@@ -117,7 +118,7 @@
         </div>
     </section>
 
-    <section  class="bg-gradient-to-b from-[#262262] to-[#27AAE1] relative z-0 py-28">
+    <section id="welcome-message" class="bg-gradient-to-b from-[#262262] to-[#27AAE1] relative z-0 py-28">
         {{-- <div class="absolute inset-0 feature start-0"></div> --}}
         <div class="relative">
             <div class="w-full max-w-6xl mx-auto border-b mb-10 pb-10 border-white border-opacity-35">
@@ -158,34 +159,36 @@
                     </div>
                 </div>
             </div>
-            <div id="welcome-message" class="">
+            <div class="">
                 <h2 class="text-4xl text-white font-semibold uppercase text-center mt-10">Welcome <span
                         class="text-[#FF47AF]">Note
                     </span></h2>
                 <livewire:pages.welcome-message />
-                
+
             </div>
         </div>
     </section>
 
     <section id="organizing-committee" class="w-full py-24 px-2 lg:px-4 pattern">
         <div class="bg-competition w-full h-full absolute"></div>
-            <livewire:pages.committee />
-        </div>
+        <livewire:pages.committee />
     </section>
 
     <section id="faculties" class="w-full py-24 px-2 lg:px-4 bg-slate-50">
         <livewire:pages.faculty />
     </section>
-    <section id="program-at-glance" class="w-full pt-24 pb-3 px-2 lg:px-4">
+    <section id="program-at-glance" class="w-full pt-24 pb-3 px-2 lg:px-4 pattern">
         <livewire:pages.at-glance />
     </section>
+
     <section id="scientific-schedule" class="w-full py-24 px-2 lg:px-4 bg-slate-50">
         <livewire:pages.schedule />
     </section>
-    <section id="registration" class="w-full py-24 px-2 lg:px-4">
+
+    <section id="registration" class="w-full py-24 px-2 lg:px-4 pattern">
         <livewire:pages.registration />
     </section>
+
     <section id="abstract-submission" class="w-full py-24 px-2 lg:px-4 bg-slate-50">
         <livewire:pages.guideline-abstract />
     </section>
@@ -216,7 +219,10 @@
                     </div>
                 </div>
                 <div class="lg:w-2/3 w-full px-1 flex flex-col md:flex-row gap-2">
-                    <iframe class="rounded-lg w-full " src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3966.266510804608!2d106.82466677478348!3d-6.228551760998128!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2e69f3e522f87729%3A0xdefece2f325ccb3d!2sRitz-Carlton%20Jakarta%2C%20RT.5%2FRW.2%2C%20Kuningan%2C%20East%20Kuningan%2C%20Setiabudi%2C%20South%20Jakarta%20City%2C%20Jakarta%2012950!5e0!3m2!1sen!2sid!4v1779089793373!5m2!1sen!2sid" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+                    <iframe class="rounded-lg w-full "
+                        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3966.266510804608!2d106.82466677478348!3d-6.228551760998128!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2e69f3e522f87729%3A0xdefece2f325ccb3d!2sRitz-Carlton%20Jakarta%2C%20RT.5%2FRW.2%2C%20Kuningan%2C%20East%20Kuningan%2C%20Setiabudi%2C%20South%20Jakarta%20City%2C%20Jakarta%2012950!5e0!3m2!1sen!2sid!4v1779089793373!5m2!1sen!2sid"
+                        style="border:0;" allowfullscreen="" loading="lazy"
+                        referrerpolicy="no-referrer-when-downgrade"></iframe>
                 </div>
             </div>
 

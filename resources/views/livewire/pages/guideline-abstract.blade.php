@@ -8,7 +8,7 @@
     <h2 class="md:text-4xl text-xl font-semibold uppercase text-center mt-10">Abstract <span class="text-[#FF47AF]">submission
         </span></h2>
 
-    <section class="bg-base-100 px-5 md:px-10 pt-0 pb-10 md:py-20">
+    <section class="px-5 md:px-10 pt-0 pb-10 md:py-20">
         <div class="text-center lg:text-start mb-5 md:mb-10">
             <h2 class="mb-2 uppercase text-3xl font-semibold">Guideline for <span class="text-[#262262]">Abstract
                     Submission</span>
