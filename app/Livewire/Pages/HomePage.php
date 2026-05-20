@@ -10,7 +10,7 @@ use Livewire\Attributes\Title;
 use Livewire\Component;
 
 
-#[Title('PDS PA')]
+#[Title('3rd ASEAN PATHOLOGY Conference 2026')]
 class HomePage extends Component
 {
     public function render()

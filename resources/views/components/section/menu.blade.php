@@ -198,7 +198,7 @@
         <a href="#abstract-submission" 
             class="hover:text-[#FF47AF] hover:underline transition-colors duration-200"
             :class="activeHash === 'abstract-submission' ? 'text-[#FF47AF]' : 'text-[#262262]'">
-            Abstract Submission
+            Submission
         </a>
     </li>
 </ul>
