@@ -19,5 +19,8 @@ class Registration extends Model
         'date_onsite',
         'subtitle',
         'description',
+        'url_earlybird',
+        'url_regular',
+        'url_onsite',
     ];
 }

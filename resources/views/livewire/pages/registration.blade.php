@@ -10,7 +10,8 @@
 
     <section class="px-5 md:px-10 pt-0 pb-10 md:py-20 bg-competition">
         <div class="mb-5">
-            <h1 class="font-bold md:text-2xl text-xl uppercase text-[#262262]"><i class="fa fa-angles-right text-lg"></i> Indonesian Participant</h1>
+            <h1 class="font-bold md:text-2xl text-xl uppercase text-[#262262]"><i
+                    class="fa fa-angles-right text-lg"></i> Indonesian Participant</h1>
         </div>
         <div class="flex flex-wrap justify-evenly gap-2 mb-10">
             @foreach ($regLocals as $item)
@@ -39,16 +40,28 @@
                         {!! str($item->description)->markdown()->sanitizeHtml() !!}
                     </div>
                     <div class="mt-6">
-                        <button
+                        @if (now()->lte(\Carbon\Carbon::create(2026, 8, 31)))
+                        <a href="{{$item->url_earlybird !== null ? $item->url_earlybird : 'javascript:void(0)'}}"
                             class="btn hover:bg-[#FF47AF] bg-[#2B3990] btn-block uppercase tracking-widest text-white rounded-lg"><i
-                                class="fa fa-edit text-xs"></i> Register</button>
+                                class="fa fa-edit text-xs"></i> Register</a>
+                        @elseif (now()->lte(\Carbon\Carbon::create(2026, 11, 6)))
+                        <a href="{{$item->url_regular !== null ? $item->url_regular : 'javascript:void(0)'}}"
+                            class="btn hover:bg-[#FF47AF] bg-[#2B3990] btn-block uppercase tracking-widest text-white rounded-lg"><i
+                                class="fa fa-edit text-xs"></i> Register</a>
+                        @else
+                        <a href="{{$item->url_onsite !== null ? $item->url_onsite : 'javascript:void(0)'}}"
+                            class="btn hover:bg-[#FF47AF] bg-[#2B3990] btn-block uppercase tracking-widest text-white rounded-lg"><i
+                                class="fa fa-edit text-xs"></i> Register</a>
+                        @endif
+
                     </div>
                 </div>
             </div>
             @endforeach
         </div>
         <div class="mb-5">
-            <h1 class="font-bold md:text-2xl text-xl text-[#262262] uppercase"><i class="fa fa-angles-right text-lg"></i> International Participant</h1>
+            <h1 class="font-bold md:text-2xl text-xl text-[#262262] uppercase"><i
+                    class="fa fa-angles-right text-lg"></i> International Participant</h1>
         </div>
         <div class="flex flex-wrap justify-evenly gap-2">
             @foreach ($regForeigns as $foreign)
@@ -77,9 +90,19 @@
                         {!! str($foreign->description)->markdown()->sanitizeHtml() !!}
                     </div>
                     <div class="mt-6">
-                        <button
+                        @if (now()->lte(\Carbon\Carbon::create(2026, 8, 31)))
+                        <a href="{{$foreign->url_earlybird !== null ? $foreign->url_earlybird : 'javascript:void(0)'}}"
                             class="btn hover:bg-[#FF47AF] bg-[#2B3990] btn-block uppercase tracking-widest text-white rounded-lg"><i
-                                class="fa fa-edit text-xs"></i> Register</button>
+                                class="fa fa-edit text-xs"></i> Register</a>
+                        @elseif (now()->lte(\Carbon\Carbon::create(2026, 11, 6)))
+                        <a href="{{$foreign->url_regular !== null ? $foreign->url_regular : 'javascript:void(0)'}}"
+                            class="btn hover:bg-[#FF47AF] bg-[#2B3990] btn-block uppercase tracking-widest text-white rounded-lg"><i
+                                class="fa fa-edit text-xs"></i> Register</a>
+                        @else
+                        <a href="{{$foreign->url_onsite !== null ? $foreign->url_onsite : 'javascript:void(0)'}}"
+                            class="btn hover:bg-[#FF47AF] bg-[#2B3990] btn-block uppercase tracking-widest text-white rounded-lg"><i
+                                class="fa fa-edit text-xs"></i> Register</a>
+                        @endif
                     </div>
                 </div>
             </div>

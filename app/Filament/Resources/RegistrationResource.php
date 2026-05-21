@@ -52,14 +52,20 @@ class RegistrationResource extends Resource
                     ->numeric(),
                 DatePicker::make('date_early_bird')
                     ->native(false),
+                TextInput::make('url_earlybird')
+                    ->url(),
                 TextInput::make('normal_reg')
                     ->numeric(),
                 DatePicker::make('date_normal')
                     ->native(false),
+                TextInput::make('url_regular')
+                    ->url(),
                 TextInput::make('onsite_reg')
                     ->numeric(),
                 DatePicker::make('date_onsite')
                     ->native(false),
+                TextInput::make('url_onsite')
+                    ->url(),
                 Toggle::make('is_Active')
                     ->default(true)
                     ->inline(),
