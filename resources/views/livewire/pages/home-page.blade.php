@@ -22,8 +22,8 @@
                     </div>
                 </div>
                 <div class="w-full max-w-2xl">
-                    <p class="italic mt-3 text-[#FFDE17] font-bold md:text-3xl">" Precision in Practise: Frontiers in
-                        Gynaecological, Thoraric and Oral Pathology "</p>
+                    <p class="italic mt-3 text-[#FFDE17] font-bold md:text-3xl">" Precision in Practice: Frontiers in
+                        Gynaecological, Thoracic and Oral Pathology "</p>
                 </div>
                 <div class="flex flex-col md:flex-row lg:justify-start justify-center items-center gap-3 mt-8">
                     <div

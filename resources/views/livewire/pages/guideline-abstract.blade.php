@@ -24,8 +24,8 @@
                         <h2 class="card-title">Online <span class="text-[#FF47AF]">Submission</span></h2>
                         <p class="text-gray-600 italic">*make sure the file complies with the guidelines.</p>
                         <div class="card-actions justify-end mt-5">
-                            <a href="javascript:void(0)" class="btn hover:bg-[#FF47AF] bg-[#2B3990] text-white"><i class="fa-solid fa-upload me-1"></i>
-                                Submit Abstract</a>
+                            <button onclick="abstract.showModal()" class="btn hover:bg-[#FF47AF] bg-[#2B3990] text-white"><i class="fa-solid fa-upload me-1"></i>
+                                Submit Abstract</button>
                         </div>
                     </div>
                 </div>
@@ -43,6 +43,19 @@
             </div>
         </div>
     </section>
+
+    <dialog id="abstract" class="modal">
+        <div class="modal-box w-11/12 max-w-6xl">
+            <h3 class="text-lg font-bold">Abstract Submission</h3>
+            <iframe class="w-full h-svh" src="https://expo.virconex-id.com/abstract/pdssa2026/" frameborder="0"></iframe>
+            <div class="modal-action">
+                <form method="dialog">
+                    <!-- if there is a button in form, it will close the modal -->
+                    <button class="btn">Close</button>
+                </form>
+            </div>
+        </div>
+    </dialog>
 
     <section class="bg-base-200 px-5 md:px-10 py-10 md:py-20">
         <div class="text-center lg:text-start mb-5 md:mb-10">
