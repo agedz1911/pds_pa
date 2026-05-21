@@ -121,7 +121,7 @@
     <section id="welcome-message" class="bg-gradient-to-b from-[#262262] to-[#27AAE1] relative z-0 py-28">
         {{-- <div class="absolute inset-0 feature start-0"></div> --}}
         <div class="relative">
-            <div class="w-full max-w-6xl mx-auto border-b mb-10 pb-10 border-white border-opacity-35">
+            {{-- <div class="w-full max-w-6xl mx-auto border-b mb-10 pb-10 border-white border-opacity-35">
                 <div class="mb-16">
                     <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4">
                         <div class="w-full border-e border-opacity-35 border-white ">
@@ -158,7 +158,7 @@
                         </div>
                     </div>
                 </div>
-            </div>
+            </div> --}}
             <div class="">
                 <h2 class="text-4xl text-white font-semibold uppercase text-center mt-10">Welcome <span
                         class="text-[#FF47AF]">Note
