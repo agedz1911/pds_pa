@@ -14,9 +14,9 @@
                 <time class="font-mono italic">{{ $date->title }}</time>
                 <div class="text-lg font-semibold text-[#262262]">{{
                     $date->date_end
-                    ? \Carbon\Carbon::parse($date->date)->format('F, jS') . ' - ' .
-                    \Carbon\Carbon::parse($date->date_end)->format('F jS, Y')
-                    : \Carbon\Carbon::parse($date->date)->format('F, jS Y')
+                    ? \Carbon\Carbon::parse($date->date)->format('F, d') . ' - ' .
+                    \Carbon\Carbon::parse($date->date_end)->format('F d, Y')
+                    : \Carbon\Carbon::parse($date->date)->format('F, d Y')
                     }}</div>
             </div>
             @else
@@ -24,9 +24,9 @@
                 <time class="font-mono italic">{{ $date->title }}</time>
                 <div class="text-lg font-semibold text-[#262262]">{{
                     $date->date_end
-                    ? \Carbon\Carbon::parse($date->date)->format('F, jS') . ' - ' .
-                    \Carbon\Carbon::parse($date->date_end)->format('F jS, Y')
-                    : \Carbon\Carbon::parse($date->date)->format('F, jS Y')
+                    ? \Carbon\Carbon::parse($date->date)->format('F, d') . ' - ' .
+                    \Carbon\Carbon::parse($date->date_end)->format('F d, Y')
+                    : \Carbon\Carbon::parse($date->date)->format('F, d Y')
                     }}</div>
             </div>
             @endif
