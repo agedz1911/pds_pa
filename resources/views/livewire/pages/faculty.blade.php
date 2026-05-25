@@ -40,7 +40,7 @@
                                         class="text-xl font-semibold text-[#262262] hover:text-[#FF47AF] hover:cursor-pointer">
                                         {{$indo->name}}
                                     </h2>
-                                    <p>{{$indo->description}}</p>
+                                    <p class="text-xs italic text-start text-gray-500">{{$indo->description}}</p>
                                 </div>
                             </div>
 
