@@ -50,17 +50,23 @@ class RegistrationResource extends Resource
                 TextInput::make('subtitle'),
                 TextInput::make('early_bird_reg')
                     ->numeric(),
+                TextInput::make('discount_early')
+                    ->numeric(),
                 DatePicker::make('date_early_bird')
                     ->native(false),
                 TextInput::make('url_earlybird')
                     ->url(),
                 TextInput::make('normal_reg')
                     ->numeric(),
+                TextInput::make('discount_normal')
+                    ->numeric(),
                 DatePicker::make('date_normal')
                     ->native(false),
                 TextInput::make('url_regular')
                     ->url(),
                 TextInput::make('onsite_reg')
+                    ->numeric(),
+                TextInput::make('discount_onsite')
                     ->numeric(),
                 DatePicker::make('date_onsite')
                     ->native(false),
@@ -83,7 +89,15 @@ class RegistrationResource extends Resource
                 TextColumn::make('title'),
                 TextColumn::make('early_bird_reg')
                     ->numeric(),
+                TextColumn::make('discount_early')
+                    ->numeric(),
                 TextColumn::make('normal_reg')
+                    ->numeric(),
+                TextColumn::make('discount_normal')
+                    ->numeric(),
+                TextColumn::make('onsite_reg')
+                    ->numeric(),
+                TextColumn::make('discount_onsite')
                     ->numeric(),
                 IconColumn::make('is_Active')
                     ->boolean()

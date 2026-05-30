@@ -28,12 +28,35 @@
                     <div class="flex justify-between">
                         <h2 class="md:text-2xl text-xl font-bold">{{$item->title}}</h2>
                         @if (now()->lte(\Carbon\Carbon::create(2026, 8, 31)))
-                        <span class="text-xl">IDR {{number_format($item->early_bird_reg,
-                            0, ',', '.')}}</span>
+                        <span class="text-xl">IDR
+                            @if ($item->discount_early !== null && $item->discount_early > 0)
+                            {{number_format($item->discount_early, 0, ',', '.')}} <br>
+                            <span class="line-through text-sm text-error">IDR
+                                {{number_format($item->early_bird_reg, 0, ',', '.')}}</span>
+                            @else
+                            {{number_format($item->early_bird_reg, 0, ',', '.')}}
+                            @endif
+                        </span>
                         @elseif (now()->lte(\Carbon\Carbon::create(2026, 11, 6)))
-                        <span class="text-xl">IDR {{$item->normal_reg}}</span>
+                        <span class="text-xl">IDR
+                            @if ($item->discount_normal !== null && $item->discount_normal > 0)
+                            {{number_format($item->discount_normal, 0, ',', '.')}} <br>
+                            <span class="line-through text-sm text-error">IDR
+                                {{number_format($item->normal_reg, 0, ',', '.')}}</span>
+                            @else
+                            {{number_format($item->normal_reg, 0, ',', '.')}}
+                            @endif
+                        </span>
                         @else
-                        <span class="text-xl">IDR {{$item->onsite_reg}}</span>
+                        <span class="text-xl">IDR
+                            @if ($item->discount_onsite !== null && $item->discount_onsite > 0)
+                            {{number_format($item->discount_onsite, 0, ',', '.')}} <br>
+                            <span class="line-through text-sm text-error">IDR
+                                {{number_format($item->onsite_reg, 0, ',', '.')}}</span>
+                            @else
+                            {{number_format($item->onsite_reg, 0, ',', '.')}}
+                            @endif
+                        </span>
                         @endif
                     </div>
                     <div>

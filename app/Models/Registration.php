@@ -22,5 +22,8 @@ class Registration extends Model
         'url_earlybird',
         'url_regular',
         'url_onsite',
+        'discount_early',
+        'discount_normal',
+        'discount_onsite',
     ];
 }
