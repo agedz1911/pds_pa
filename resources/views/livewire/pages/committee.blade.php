@@ -10,8 +10,8 @@
 
     <section class="mx-auto w-full  px-5 md:px-10 py-10 ">
 
-        {{-- @foreach ($uniqueCategories as $category)
-        <h2 class="text-center text-xl lg:text-2xl font-bold mb-5 uppercase text-[#FF47AF]">{{$category}}</h2>
+        @foreach ($uniqueCategories as $category)
+        <h2 class="text-center text-xl lg:text-2xl font-bold mb-5 uppercase text-[#262262]">{{$category}}</h2>
         <div class="flex flex-wrap gap-4 justify-center mb-12">
             @foreach ($committees as $committee)
             @if ($committee->category == $category)
@@ -22,9 +22,8 @@
                 </figure>
                 <div class="card-body">
                     <h2 class="card-title">{{ $committee->name }}</h2>
-                    <p>@if ($committee->title != null)
-                        <br>
-                        <span class="font-semibold ml-3">({{ $committee->title }})</span>
+                    <p class="text-center mt-0 font-semibold italic text-slate-600">@if ($committee->title != null)
+                        ({{ $committee->title }})
                         @endif
                     </p>
                 </div>
@@ -32,8 +31,8 @@
             @endif
             @endforeach
         </div>
-        @endforeach --}}
-        <div class="grid grid-cols-1 lg:grid-cols-2 gap-3 relative">
+        @endforeach
+        {{-- <div class="grid grid-cols-1 lg:grid-cols-2 gap-3 relative">
             @if (count($committees) > 0)
             @foreach ($uniqueCategories as $category)
             <div class="flex flex-col">
@@ -59,7 +58,7 @@
                 <p class="text-gray-500 text-2xl text-center font-semibold">No Data</p>
             </div>
             @endif
-        </div>
+        </div> --}}
     </section>
 
 
