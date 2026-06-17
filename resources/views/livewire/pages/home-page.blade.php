@@ -188,6 +188,9 @@
     <section id="registration" class="w-full py-24 px-2 lg:px-4 pattern">
         <livewire:pages.registration />
     </section>
+    <section id="accommodation" class="w-full py-24 px-2 lg:px-4 ">
+        <livewire:pages.accommodation />
+    </section>
 
     <section id="abstract-submission" class="w-full py-24 px-2 lg:px-4 bg-slate-50">
         <livewire:pages.guideline-abstract />

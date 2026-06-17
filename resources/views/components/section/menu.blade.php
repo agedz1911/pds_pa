@@ -192,6 +192,14 @@
             Registration
         </a>
     </li>
+    <!-- Accommodation -->
+    <li>
+        <a href="#accommodation" 
+            class="hover:text-[#FF47AF] hover:underline transition-colors duration-200"
+            :class="activeHash === 'accommodation' ? 'text-[#FF47AF]' : 'text-[#262262]'">
+            Accommodation
+        </a>
+    </li>
 
     <!-- Abstract Submission -->
     <li>
