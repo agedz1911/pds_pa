@@ -37,7 +37,7 @@
                                     Saturday to Sunday
                                 </p>
                                 <p class="text-sm text-gray-500 truncate">
-                                    November 7<sup>th</sup> - 8<sup>th</sup>, 2026
+                                    November 7 - 8, 2026
                                 </p>
                             </div>
                         </div>
@@ -270,7 +270,7 @@
         // Get current date and time
         const currentTime = new Date();
 
-        const targetTime = new Date(2026, 10, 7, 08, 00, 00);
+        const targetTime = new Date(2026, 10, 7, 8, 0, 0);
 
         // Update countdown time
         function updateCountdown() {
