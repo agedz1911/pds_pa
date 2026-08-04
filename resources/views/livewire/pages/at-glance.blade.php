@@ -9,11 +9,12 @@
             class="text-[#FF47AF]">glance
         </span></h2>
 
-    <div class="px-5 lg:px-10 mt-10">
-        <label class="input input-lg input-secondary rounded-lg w-full">
+    <div class="px-5 lg:px-10 mt-10 flex flex-wrap gap-2 justify-end md:justify-between items-center">
+        <label class="input input-lg input-secondary rounded-lg w-full max-w-6xl">
             <i class="fa fa-search opacity-45 text-sm"></i>
             <input wire:model.live='search' type="text" class="grow" placeholder="Search Topics, And Sessions" />
         </label>
+        <a target="_blank" href="assets/download/schedule.pdf" class="btn btn-secondary rounded-lg"><i class="fa fa-download"></i> Download Schedule</a>
     </div>
 
     <section class="px-5 md:px-10 pt-0 pb-10 md:py-20 bg-competition">

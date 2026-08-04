@@ -18,56 +18,62 @@
 
     <section class="pt-10 pb-24 px-2 lg:px-5">
         <div class="flex flex-col lg:flex-row justify-between gap-4">
-            <div class="drawer drawer-end block lg:hidden z-30">
-                <input id="my-drawer-4" type="checkbox" class="drawer-toggle" />
-                <div class="drawer-content">
-                    <!-- Page content here -->
-                    <label for="my-drawer-4"
-                        class="drawer-button btn rounded-lg px-3"><i
-                            class="fa-solid fa-filter"></i> Filter</label>
-                </div>
-                <div class="drawer-side">
-                    <label for="my-drawer-4" aria-label="close sidebar" class="drawer-overlay"></label>
-                    <div class="menu bg-base-200 text-base-content min-h-full w-80 p-4">
-                        <!-- Sidebar content here -->
-                        <div class="my-auto">
-                            <h2 class="card-title">Filter</h2>
-                            <fieldset class="fieldset p-4 bg-base-100 border border-base-300 rounded-box w-64">
-                                <legend class="fieldset-legend">Date</legend>
-                                <div class="flex items-center">
-                                    <select wire:model.live='date' class="select flex-grow">
-                                        <option value="0">Choose a date</option>
-                                        @foreach ($uniqDates as $date)
-                                        <option value="{{ $date }}">{{ \Carbon\Carbon::parse($date)->format('d F Y') }}
-                                        </option>
-                                        @endforeach
-                                    </select>
-                                    @if($date)
-                                    <button wire:click="resetDate" class="btn btn-xs btn-error ml-2">X</button>
-                                    @endif
-                                </div>
-                            </fieldset>
-                            <fieldset class="fieldset p-4 bg-base-100 border border-base-300 rounded-box w-64">
-                                <legend class="fieldset-legend">Session</legend>
-                                <div class="flex items-center">
-                                    <select wire:model.live='category' class="select flex-grow">
-                                        <option value="0">Choose a Session</option>
-                                        @foreach ($uniqCategories as $item)
-                                        <option value="{{ $item }}">{{ $item }}</option>
-                                        @endforeach
-                                    </select>
-                                    @if($category)
-                                    <button wire:click="resetCategory" class="btn btn-xs btn-error ml-2">X</button>
-                                    @endif
-                                </div>
-                            </fieldset>
+            <div class="flex justify-between">
+                <div class="drawer drawer-end block lg:hidden z-30">
+                    <input id="my-drawer-4" type="checkbox" class="drawer-toggle" />
+                    <div class="drawer-content">
+                        <!-- Page content here -->
+                        <label for="my-drawer-4" class="drawer-button btn rounded-lg px-3"><i
+                                class="fa-solid fa-filter"></i> Filter</label>
+                    </div>
+                    <div class="drawer-side">
+                        <label for="my-drawer-4" aria-label="close sidebar" class="drawer-overlay"></label>
+                        <div class="menu bg-base-200 text-base-content min-h-full w-80 p-4">
+                            <!-- Sidebar content here -->
+                            <div class="my-auto">
+                                <h2 class="card-title">Filter</h2>
+                                <fieldset class="fieldset p-4 bg-base-100 border border-base-300 rounded-box w-64">
+                                    <legend class="fieldset-legend">Date</legend>
+                                    <div class="flex items-center">
+                                        <select wire:model.live='date' class="select flex-grow">
+                                            <option value="0">Choose a date</option>
+                                            @foreach ($uniqDates as $date)
+                                            <option value="{{ $date }}">{{ \Carbon\Carbon::parse($date)->format('d F Y')
+                                                }}
+                                            </option>
+                                            @endforeach
+                                        </select>
+                                        @if($date)
+                                        <button wire:click="resetDate" class="btn btn-xs btn-error ml-2">X</button>
+                                        @endif
+                                    </div>
+                                </fieldset>
+                                <fieldset class="fieldset p-4 bg-base-100 border border-base-300 rounded-box w-64">
+                                    <legend class="fieldset-legend">Session</legend>
+                                    <div class="flex items-center">
+                                        <select wire:model.live='category' class="select flex-grow">
+                                            <option value="0">Choose a Session</option>
+                                            @foreach ($uniqCategories as $item)
+                                            <option value="{{ $item }}">{{ $item }}</option>
+                                            @endforeach
+                                        </select>
+                                        @if($category)
+                                        <button wire:click="resetCategory" class="btn btn-xs btn-error ml-2">X</button>
+                                        @endif
+                                    </div>
+                                </fieldset>
+                            </div>
                         </div>
                     </div>
                 </div>
+                <a target="_blank" href="assets/download/schedule.pdf" class="btn btn-secondary rounded-lg block lg:hidden"><i
+                        class="fa fa-download"></i> Download Schedule</a>
             </div>
 
             <div class="card hidden lg:block lg:w-1/4 bg-base-100 order-1 lg:order-2 shadow-sm">
                 <div class="card-body">
+                    <a target="_blank" href="assets/download/schedule.pdf" class="btn btn-secondary rounded-lg"><i
+                        class="fa fa-download"></i> Download Schedule</a>
                     <h2 class="card-title">Filter</h2>
                     <fieldset class="fieldset p-4 bg-base-100 border border-base-300 rounded-box w-64">
                         <legend class="fieldset-legend">Date</legend>
@@ -109,13 +115,15 @@
                 </div>
                 @foreach ($uniqCategories as $item)
                 @if (
-                !($date == '2026-10-08' && ($item == 'Symposium' || $item == 'Master Class' || $item == 'Scientific Competition')) &&
-                !($date == '2026-10-09' && ($item == 'Symposium' || $item == 'Master Class' || $item == 'Scientific Competition')) &&
+                !($date == '2026-10-08' && ($item == 'Symposium' || $item == 'Master Class' || $item == 'Scientific
+                Competition')) &&
+                !($date == '2026-10-09' && ($item == 'Symposium' || $item == 'Master Class' || $item == 'Scientific
+                Competition')) &&
                 !($date == '2026-10-10' && ($item == 'Workshop' || $item == 'Master Class')) &&
                 !($date == '2026-10-11' && ($item == 'Workshop' ))
                 )
-                <p class="font-semibold tracking-wider my-5"><i
-                        class="fa fa-angle-right text-sm font-semibold"></i> {{$item}}</p>
+                <p class="font-semibold tracking-wider my-5"><i class="fa fa-angle-right text-sm font-semibold"></i>
+                    {{$item}}</p>
                 @endif
                 @foreach ($atglances as $atglance)
                 @if ($atglance->category_sesi == $item && $atglance->date == $date)
@@ -204,71 +212,72 @@
                             @foreach ($uniqDates as $date)
                             <div class="section-title py-2 text-center text-lg-start">
                                 <h4 class="mb-1">{{\Carbon\Carbon::parse($date)->format('l, d F')}}</h4>
-</div>
-@foreach ($uniqCategories as $item)
-@if (
-!($date == '2025-09-25' && ($item == 'Workshop' ))
-)
-<p class="mb-0 mt-5">{{$item}}</p>
+                            </div>
+                            @foreach ($uniqCategories as $item)
+                            @if (
+                            !($date == '2025-09-25' && ($item == 'Workshop' ))
+                            )
+                            <p class="mb-0 mt-5">{{$item}}</p>
 
-<div class="faq-accordion p-4 bg-lightgrey rounded border-2 border-light-subtle ">
-    <div class="accordion accordion-faq " id="accordionFlushExample">
-        @foreach ($atglances as $atglance)
-        @if ($atglance->category_sesi == $item && $atglance->date == $date)
-        <div class="accordion-item border mb-1 rounded">
-            <p class="accordion-header p-4">
-                <button class="accordion-button collapsed fw-semibold p-0" type="button"
-                    data-bs-toggle="collapse" data-bs-target="#{{$loop->index}}"
-                    aria-expanded="false" aria-controls="tes">
-                    {{$atglance->title_ses}} - <small class="fst-italic"> {{$atglance->room}}</small>
+                            <div class="faq-accordion p-4 bg-lightgrey rounded border-2 border-light-subtle ">
+                                <div class="accordion accordion-faq " id="accordionFlushExample">
+                                    @foreach ($atglances as $atglance)
+                                    @if ($atglance->category_sesi == $item && $atglance->date == $date)
+                                    <div class="accordion-item border mb-1 rounded">
+                                        <p class="accordion-header p-4">
+                                            <button class="accordion-button collapsed fw-semibold p-0" type="button"
+                                                data-bs-toggle="collapse" data-bs-target="#{{$loop->index}}"
+                                                aria-expanded="false" aria-controls="tes">
+                                                {{$atglance->title_ses}} - <small class="fst-italic">
+                                                    {{$atglance->room}}</small>
 
-                </button>
-            </p>
-            <div id="{{$loop->index}}" class="accordion-collapse collapse"
-                data-bs-parent="#accordionFlushExample">
-                <div class="accordion-body bg-lightgrey">
-                    <div class="px-0">
-                        <h4>{{$atglance->title_ses}}</h4>
-                        <p class="black mb-2">{{$atglance->time}} | {{$atglance->room}}</p>
-                        <p class="black mb-2"></p>
-                        <p class="mb-0">Moderator : <span
-                                class="black fw-semibold">{{$atglance->moderator}}
-                            </span></p>
-                        <p class="">Panelist : <span
-                                class="black fw-semibold">{{$atglance->panelist}}
-                            </span></p>
-                    </div>
-                    <div class="table-responsive">
-                        <table class="table rounded table-hover">
-                            <tbody>
-                                @foreach ($atglance->schedules as $schedule)
-                                <tr>
-                                    <td>{{$schedule->time_speaker}}</td>
-                                    <td><span
-                                            class="black fw-bold">{{$schedule->topic_title}}</span>
-                                        <br><small>Speaker: {{$schedule->speaker}}</small>
-                                    </td>
-                                    <td></td>
-                                </tr>
-                                @endforeach
-                            </tbody>
-                        </table>
+                                            </button>
+                                        </p>
+                                        <div id="{{$loop->index}}" class="accordion-collapse collapse"
+                                            data-bs-parent="#accordionFlushExample">
+                                            <div class="accordion-body bg-lightgrey">
+                                                <div class="px-0">
+                                                    <h4>{{$atglance->title_ses}}</h4>
+                                                    <p class="black mb-2">{{$atglance->time}} | {{$atglance->room}}</p>
+                                                    <p class="black mb-2"></p>
+                                                    <p class="mb-0">Moderator : <span
+                                                            class="black fw-semibold">{{$atglance->moderator}}
+                                                        </span></p>
+                                                    <p class="">Panelist : <span
+                                                            class="black fw-semibold">{{$atglance->panelist}}
+                                                        </span></p>
+                                                </div>
+                                                <div class="table-responsive">
+                                                    <table class="table rounded table-hover">
+                                                        <tbody>
+                                                            @foreach ($atglance->schedules as $schedule)
+                                                            <tr>
+                                                                <td>{{$schedule->time_speaker}}</td>
+                                                                <td><span
+                                                                        class="black fw-bold">{{$schedule->topic_title}}</span>
+                                                                    <br><small>Speaker: {{$schedule->speaker}}</small>
+                                                                </td>
+                                                                <td></td>
+                                                            </tr>
+                                                            @endforeach
+                                                        </tbody>
+                                                    </table>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    @endif
+                                    @endforeach
+                                </div>
+                            </div>
+                            @endif
+                            @endforeach
+                            @endforeach
+                        </div>
                     </div>
                 </div>
             </div>
         </div>
-
-        @endif
-        @endforeach
-    </div>
-</div>
-@endif
-@endforeach
-@endforeach
-</div>
-</div>
-</div>
-</div>
-</div>
-</section> --}}
+    </section> --}}
 </div>
