@@ -20,7 +20,7 @@
     <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
 
     <!--FontAwesome CSS-->
-    <script src="https://kit.fontawesome.com/f662ae2afd.js" crossorigin="anonymous"></script>
+    <script src="https://kit.fontawesome.com/fe41915e10.js" crossorigin="anonymous"></script>
     <!-- daisy ui -->
     <link href="https://cdn.jsdelivr.net/npm/daisyui@5" rel="stylesheet" type="text/css" />
     <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
