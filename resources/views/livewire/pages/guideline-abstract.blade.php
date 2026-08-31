@@ -47,6 +47,7 @@
     <dialog id="abstract" class="modal">
         <div class="modal-box w-11/12 max-w-6xl">
             <h3 class="text-lg font-bold">Abstract Submission</h3>
+            <p>Use alternative link for submission if form not showing properly or if you encounter any issues, <a href="https://expo.virconex-id.com/abstract/pdssa2026/" class="text-[#FF47AF] underline" target="_blank">click here</a>.</p>
             <iframe class="w-full h-svh" src="https://expo.virconex-id.com/abstract/pdssa2026/" frameborder="0"></iframe>
             <div class="modal-action">
                 <form method="dialog">
