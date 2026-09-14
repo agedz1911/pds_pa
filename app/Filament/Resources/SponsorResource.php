@@ -44,7 +44,7 @@ class SponsorResource extends Resource
                     'Platinum Sponsor' => 'Platinum Sponsor',
                     'Gold Sponsor' => 'Gold Sponsor',
                     'Silver Sponsor' => 'Silver Sponsor',
-                    'Exhibitors and Scientific Grant' => 'Exhibitors and Scientific Grant',
+                    'Exhibitors' => 'Exhibitors',
                 ]),
                 TextInput::make('no_urut')
                     ->numeric(),
@@ -79,6 +79,8 @@ class SponsorResource extends Resource
                 TextColumn::make('company_profile')
                     ->markdown()
                     ->limit(50),
+                TextColumn::make('no_urut')
+                    ->sortable(),
                 IconColumn::make('is_active')
                     ->boolean()
             ])

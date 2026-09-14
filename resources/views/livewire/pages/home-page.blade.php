@@ -196,6 +196,10 @@
         <livewire:pages.guideline-abstract />
     </section>
 
+    <section id="sponsors" class="w-full py-24 px-2 lg:px-4 bg-slate-50">
+        <livewire:section.carousel-sponsor />
+    </section>
+
     <section class="w-full pt-24 pb-3 px-2 lg:px-4">
         <div class="text-center mb-5 pb-10">
             <h2 class="md:text-4xl text-xl font-semibold uppercase mb-1">GET DIRECTION TO THE <span

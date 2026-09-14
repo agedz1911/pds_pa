@@ -183,5 +183,13 @@
                 <i class="fa-solid fa-angle-right"
                     :class="activeHash === 'abstract-submission' ? 'text-[#FF47AF]' : ''"></i></a>
         </li>
+        <li>
+            <a href="#sponsors" 
+                class="justify-between font-normal hover:text-[#FF47AF] after:content-[''] relative after:absolute flex items-center hover:after:items-center transition-all after:transition-all duration-300 after:duration-300 after:bg-[#FF47AF] hover:ps-3 after:left-0 after:h-0 hover:after:h-[5px] after:w-0 hover:after:w-[5px] after:rounded-full"
+                :class="activeHash === 'sponsors' ? 'text-[#FF47AF]' : ''">
+                Sponsors
+                <i class="fa-solid fa-angle-right"
+                    :class="activeHash === 'sponsors' ? 'text-[#FF47AF]' : ''"></i></a>
+        </li>
     </ul>
 </nav>

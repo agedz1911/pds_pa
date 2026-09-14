@@ -209,4 +209,11 @@
             Submission
         </a>
     </li>
+    <li>
+        <a href="#sponsors" 
+            class="hover:text-[#FF47AF] hover:underline transition-colors duration-200"
+            :class="activeHash === 'sponsors' ? 'text-[#FF47AF]' : 'text-[#262262]'">
+            Sponsors
+        </a>
+    </li>
 </ul>
