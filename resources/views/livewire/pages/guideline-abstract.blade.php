@@ -71,8 +71,8 @@
                         <h2 class="card-title">Online <span class="text-[#FF47AF]">Submission</span></h2>
                         <p class="text-gray-600 italic">*make sure the file complies with the guidelines.</p>
                         <div class="card-actions justify-end mt-5">
-                            <button class="btn btn-accent"><i class="fa-solid fa-upload me-1"></i> Submit
-                                E-Poster</button>
+                            <a href="https://expo.virconex-id.com/eposter/pdspa2026/auth/login.php" target="_blank" class="btn btn-accent"><i class="fa-solid fa-upload me-1"></i> Submit
+                                E-Poster</a>
                         </div>
                     </div>
                 </div>
