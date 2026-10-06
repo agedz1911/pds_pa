@@ -24,7 +24,7 @@ class FreePaperSchedule extends Component
     public $presentationGuides;
 
     public $search = '';
-    public $perPage = 50;
+    public $perPage = 1;
     public $selectedCategory = '';
 
     public function mount()
