@@ -66,8 +66,8 @@ class SchedulePaperResource extends Resource
                 Tables\Columns\TextColumn::make('paperCategory.name')
                     ->badge()
                     ->color(fn(string $state): string => match ($state) {
-                        'Podium Presentation' => 'success',
-                        'Moderated e-Poster' => 'info',
+                        'Poster' => 'success',
+                        'Moderated Poster' => 'info',
                         'Unmoderated Poster' => 'warning',
                     })
                     ->sortable(),

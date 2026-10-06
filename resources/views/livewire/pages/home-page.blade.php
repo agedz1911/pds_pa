@@ -196,7 +196,11 @@
         <livewire:pages.guideline-abstract />
     </section>
 
-    <section id="sponsors" class="w-full py-24 px-2 lg:px-4 bg-slate-50">
+    <section id="e-poster" class="w-full py-24 px-2 lg:px-4">
+        <livewire:pages.free-paper-schedule />
+    </section>
+
+    <section id="sponsors" class="w-full py-24 px-2 lg:px-4 pattern">
         <livewire:section.carousel-sponsor />
     </section>
 

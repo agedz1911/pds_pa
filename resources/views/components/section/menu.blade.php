@@ -210,6 +210,13 @@
         </a>
     </li>
     <li>
+        <a href="#e-poster" 
+            class="hover:text-[#FF47AF] hover:underline transition-colors duration-200"
+            :class="activeHash === 'e-poster' ? 'text-[#FF47AF]' : 'text-[#262262]'">
+            E-Poster
+        </a>
+    </li>
+    <li>
         <a href="#sponsors" 
             class="hover:text-[#FF47AF] hover:underline transition-colors duration-200"
             :class="activeHash === 'sponsors' ? 'text-[#FF47AF]' : 'text-[#262262]'">
